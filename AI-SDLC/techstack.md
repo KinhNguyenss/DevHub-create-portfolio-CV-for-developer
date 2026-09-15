@@ -1,9 +1,3 @@
-Dự án **DevHub** chưa có tech stack được chốt (file `00-project-context.md` vẫn là `[TECH STACK]` placeholder). Để tư vấn phù hợp, tôi cần hiểu context thêm một chút:
-
-Tốt! Với profile đó, đây là tech stack tôi đề xuất cho **DevHub**:
-
----
-
 ## 🛠️ Tech Stack — DevHub CV/Portfolio Platform
 
 ### Frontend — Next.js 15 (App Router)
