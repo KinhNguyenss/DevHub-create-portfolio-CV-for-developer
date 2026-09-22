@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"secondary-fixed":"#c4e7ff","surface-variant":"#313540","on-tertiary":"#490080","on-secondary-container":"#00374d","secondary-fixed-dim":"#7bd0ff","surface-container":"#1c1f2a","on-tertiary-container":"#400071","on-surface":"#dfe2f1","surface-container-lowest":"#0a0e18","inverse-on-surface":"#2c303b","on-primary-container":"#0d0096","primary-fixed":"#e1e0ff","tertiary-container":"#b76dff","primary-container":"#8083ff","secondary-container":"#00a6e0","outline-variant":"#464554","tertiary-fixed":"#f0dbff","on-primary-fixed-variant":"#2f2ebe","surface-bright":"#353944","secondary":"#7bd0ff","on-tertiary-fixed":"#2c0051","surface-container-highest":"#313540","error":"#ffb4ab","on-secondary":"#00354a","primary-fixed-dim":"#c0c1ff","error-container":"#93000a","on-surface-variant":"#c7c4d7","on-error":"#690005","tertiary":"#ddb7ff","surface":"#0f131d","surface-dim":"#0f131d","on-primary":"#1000a9","on-secondary-fixed":"#001e2c","primary":"#c0c1ff","on-primary-fixed":"#07006c","surface-container-high":"#262a35","inverse-surface":"#dfe2f1","surface-tint":"#c0c1ff","outline":"#908fa0","on-tertiary-fixed-variant":"#6900b3","surface-container-low":"#171b26","tertiary-fixed-dim":"#ddb7ff","on-secondary-fixed-variant":"#004c69","background":"#0f131d","on-error-container":"#ffdad6","on-background":"#dfe2f1","inverse-primary":"#494bd6"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-lg":"1.5rem","space-sm":"0.5rem","margin-mobile":"1rem","margin":"2rem","gutter":"1.5rem","space-md":"1rem","gutter-mobile":"1rem","space-xl":"2.5rem","space-xs":"0.25rem"},"fontFamily":{"headline-md":["Geist"],"label-code-sm":["JetBrains Mono"],"label-code":["JetBrains Mono"],"display-hero-mobile":["Geist"],"headline-lg":["Geist"],"label-ui":["Inter"],"body-md":["Inter"],"body-sm":["Inter"],"headline-sm":["Geist"],"headline-lg-mobile":["Geist"],"body-lg":["Inter"],"display-hero":["Geist"]},"fontSize":{"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-code-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"400"}],"label-code":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"display-hero-mobile":["36px",{"lineHeight":"42px","letterSpacing":"-0.025em","fontWeight":"700"}],"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-ui":["14px",{"lineHeight":"20px","letterSpacing":"-0.005em","fontWeight":"500"}],"body-md":["15px",{"lineHeight":"24px","fontWeight":"400"}],"body-sm":["13px",{"lineHeight":"20px","fontWeight":"400"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"headline-lg-mobile":["28px",{"lineHeight":"34px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.03em","fontWeight":"700"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary/20 selection:text-primary"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.35)]"><div class="h-16 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-4"><div class="flex items-center gap-3"><img alt="DevHub Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UhWtEqRGhibuqJYbVUfvopu6F3zRn-NGIlO15gXUPf2pFiRiizaUQUP6TZoTdWzZErZQLs5p_zO0DbtXvV2VcTxPezOZ9YCDUjbuC1tdqCrwWjzt23GliQsUplW0bb77-WWh0MFT1eubPQBZp-DitmMIqUlaJnU6KfM8RBIWtX_Aj34dXBysv_r-0uzqJeuD97AyzLhCtL_e8hxKBIUtKOT8554tn63b1o7xfzCqJbeUBExG4oYoZaO6A"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">DevHub</span></div><nav class="hidden md:flex items-center gap-8" data-active-classes="text-primary font-label-ui"><a aria-current="page" class="transition-colors text-primary font-label-ui" data-path="features" href="#">Tính năng</a><a class="font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface transition-colors" data-path="templates" href="#">Mẫu giao diện</a><a class="font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface transition-colors" data-path="how-it-works" href="#">Cách hoạt động</a><a class="font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface transition-colors" data-path="pricing" href="#">Bảng giá</a></nav><div class="flex items-center gap-4"><a class="font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface transition-colors px-3 py-2" data-path="login" href="#">Đăng nhập</a><a class="hidden sm:inline-flex items-center justify-center font-label-ui text-label-ui text-on-primary bg-primary hover:bg-primary-fixed shadow-[0_0_20px_-3px_rgba(192,193,255,0.45)] px-4 py-2 rounded-lg transition-all transform hover:scale-[1.01]" data-path="builder" href="#">Tạo Portfolio của tôi</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- SECTION 1: HERO -->
+<section class="relative w-full overflow-hidden px-6 lg:px-12 pt-12 pb-24 lg:pb-32">
+<!-- Ambient Radial Glows -->
+<div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[720px] h-[360px] bg-primary/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+<div class="absolute top-1/3 left-1/4 w-[420px] h-[280px] bg-secondary/10 rounded-full blur-[100px] pointer-events-none -z-10"></div>
+<div class="max-w-7xl mx-auto flex flex-col items-center text-center">
+<!-- Status Pill -->
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-high shadow-sm mb-8">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+<span class="font-label-code-sm text-label-code-sm text-primary tracking-wide uppercase font-medium">DevHub Engine v2.4 Live Sync</span>
+<span class="material-symbols-outlined text-outline text-[14px]">arrow_forward</span>
+</div>
+<!-- Main Headline -->
+<h1 class="font-display-hero text-display-hero max-w-4xl tracking-tight text-on-surface mb-6">
+        Xây dựng Portfolio giúp bạn <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary-fixed to-secondary">luôn nổi bật</span>.
+      </h1>
+<!-- Supporting Text -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-10 leading-relaxed">
+        Biến hồ sơ GitHub thành Portfolio và CV lập trình viên chuyên nghiệp. Nhập dự án tự động, nâng tầm nội dung với AI, chọn giao diện mẫu tinh tế và xuất bản chỉ trong vài phút.
+      </p>
+<!-- Primary & Secondary CTA Buttons -->
+<div class="flex flex-col sm:flex-row items-center gap-4 mb-6">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg bg-primary hover:bg-primary-fixed text-on-primary font-label-ui text-label-ui shadow-[0_0_24px_-4px_rgba(192,193,255,0.45)] transition-all transform hover:scale-[1.01]" href="#builder">
+<span>Tạo Portfolio của tôi</span>
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+</a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-ui text-label-ui shadow-sm transition-all" href="#templates">
+<span>Khám phá Mẫu giao diện</span>
+<span class="material-symbols-outlined text-[18px]">grid_view</span>
+</a>
+</div>
+<!-- Trust Indicator -->
+<div class="flex items-center gap-2 font-label-code-sm text-label-code-sm text-outline mb-16">
+<span class="material-symbols-outlined text-secondary text-[16px]">verified</span>
+<span>Không cần kỹ năng thiết kế</span>
+<span class="text-surface-variant">·</span>
+<span>Bắt đầu hoàn toàn miễn phí</span>
+</div>
+<!-- Hero Visual Mockup Container -->
+<div class="relative w-full max-w-5xl mx-auto">
+<!-- Floating Glassmorphic Badges -->
+<div class="hidden lg:flex absolute -left-8 top-12 z-20 items-center gap-2.5 px-4 py-2.5 rounded-xl bg-surface-container-lowest/90 backdrop-blur-xl shadow-xl">
+<span class="w-5 h-5 rounded-full bg-secondary/20 flex items-center justify-center text-secondary text-[12px] font-bold">✓</span>
+<span class="font-label-ui text-label-ui text-on-surface">Đã kết nối GitHub</span>
+</div>
+<div class="hidden lg:flex absolute -right-6 top-20 z-20 items-center gap-2.5 px-4 py-2.5 rounded-xl bg-surface-container-lowest/90 backdrop-blur-xl shadow-xl">
+<span class="material-symbols-outlined text-tertiary text-[18px]">auto_awesome</span>
+<span class="font-label-ui text-label-ui text-on-surface">Tóm tắt tối ưu bởi AI</span>
+</div>
+<div class="hidden lg:flex absolute -left-10 bottom-24 z-20 items-center gap-2.5 px-4 py-2.5 rounded-xl bg-surface-container-lowest/90 backdrop-blur-xl shadow-xl">
+<span class="material-symbols-outlined text-secondary text-[18px]">sync</span>
+<span class="font-label-ui text-label-ui text-on-surface">12 kho mã nguồn đã đồng bộ</span>
+</div>
+<div class="hidden lg:flex absolute -right-8 bottom-12 z-20 items-center gap-2.5 px-4 py-2.5 rounded-xl bg-surface-container-lowest/90 backdrop-blur-xl shadow-xl">
+<span class="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center text-primary text-[12px] font-bold">✓</span>
+<span class="font-label-ui text-label-ui text-on-surface">Portfolio đã xuất bản</span>
+</div>
+<!-- The Browser Window -->
+<div class="w-full rounded-2xl bg-surface-container-lowest shadow-[0_20px_50px_-10px_rgba(192,193,255,0.18)] overflow-hidden text-left">
+<!-- Window Header Bar -->
+<div class="h-11 px-4 bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-surface-variant"></span>
+<span class="w-3 h-3 rounded-full bg-surface-variant"></span>
+<span class="w-3 h-3 rounded-full bg-surface-variant"></span>
+</div>
+<!-- Address Bar -->
+<div class="flex items-center gap-2 px-4 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-code-sm text-label-code-sm w-80 justify-center">
+<span class="material-symbols-outlined text-[13px] text-secondary">lock</span>
+<span class="text-on-surface font-medium">devhub.vn/alexchen</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+<span class="material-symbols-outlined text-[18px]">share</span>
+</div>
+</div>
+<!-- Window Inner Layout -->
+<div class="p-6 md:p-10 bg-surface-container-lowest">
+<!-- Profile Identity Row -->
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-8">
+<div class="flex items-center gap-5">
+<img class="w-20 h-20 rounded-2xl object-cover shadow-md" data-alt="Close up professional portrait of Alex Chen, an experienced software engineer in his late 20s, wearing clean dark tech apparel, subtle cool indigo rim lighting, crisp studio sharpness, high-tech minimalist workspace background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfMGHgwnz7b8_fuTvABddiSTasVHu__ZT6xw49iME3UUNZATM8JkPkeT1QhwhZNKYEk8fXuII2fmkdVH85kTEAPxEUZu8912SZlgyPgXV6UAC4vilhf9jhOG3sXYWtvh9TemZYfNqbGnMq-MmUm-aTSSAo2zIPpIW7_sUjaNRNBQXRQvUPpFxKe3JaeAfMImieM34qVyvR3GzxAKOetICg7EfkfVGs9jtXOVPx8EvmFwpHy7Wbc-l2"/>
+<div class="space-y-1.5">
+<div class="flex items-center gap-2.5">
+<h2 class="font-headline-md text-headline-md text-on-surface">Alex Chen</h2>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/20 text-secondary font-label-code-sm text-label-code-sm">Staff Level</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Senior Full Stack Engineer · Distributed Systems</p>
+<div class="flex items-center gap-3 pt-1">
+<span class="inline-flex items-center gap-1 font-label-code-sm text-label-code-sm text-outline">
+<span class="material-symbols-outlined text-[14px]">location_on</span> TP. Hồ Chí Minh
+                    </span>
+<span class="inline-flex items-center gap-1 font-label-code-sm text-label-code-sm text-primary">
+<span class="material-symbols-outlined text-[14px]">code</span> github.com/alexchen
+                    </span>
+</div>
+</div>
+</div>
+<!-- Quick Stats -->
+<div class="flex items-center gap-4">
+<div class="px-4 py-2 rounded-xl bg-surface-container-low text-center">
+<div class="font-headline-sm text-headline-sm text-primary">2,840</div>
+<div class="font-label-code-sm text-label-code-sm text-on-surface-variant">Commits YTD</div>
+</div>
+<div class="px-4 py-2 rounded-xl bg-surface-container-low text-center">
+<div class="font-headline-sm text-headline-sm text-secondary">3.4k★</div>
+<div class="font-label-code-sm text-label-code-sm text-on-surface-variant">Stars Earned</div>
+</div>
+</div>
+</div>
+<!-- Profile Summary & Tech Stack Badges -->
+<div class="py-6 space-y-4">
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl leading-relaxed">
+                Chuyên sâu về kiến trúc phân tán lưu lượng cao, pipeline viễn trắc và công cụ hiệu năng. 7 năm kinh nghiệm xây dựng nền tảng chịu tải 500,000 req/s với độ trễ p99 dưới 15ms.
+              </p>
+<div class="flex flex-wrap items-center gap-2 pt-1">
+<span class="px-2.5 py-1 rounded bg-surface-container text-primary font-label-code text-label-code">TypeScript</span>
+<span class="px-2.5 py-1 rounded bg-surface-container text-secondary font-label-code text-label-code">Go</span>
+<span class="px-2.5 py-1 rounded bg-surface-container text-primary-fixed font-label-code text-label-code">Rust</span>
+<span class="px-2.5 py-1 rounded bg-surface-container text-on-surface font-label-code text-label-code">Next.js 15</span>
+<span class="px-2.5 py-1 rounded bg-surface-container text-tertiary font-label-code text-label-code">Docker &amp; K8s</span>
+<span class="px-2.5 py-1 rounded bg-surface-container text-on-surface-variant font-label-code text-label-code">Apache Kafka</span>
+</div>
+</div>
+<!-- Featured Project Card Inside Hero -->
+<div class="mt-6 p-6 rounded-xl bg-surface-container-low shadow-sm">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">memory</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Distributed Cache Engine</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-code-sm text-label-code-sm">Featured</span>
+</div>
+<span class="font-label-code-sm text-label-code-sm text-outline">github.com/alexchen/dist-cache-engine</span>
+</div>
+</div>
+<div class="flex items-center gap-3 font-label-code-sm text-label-code-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-tertiary text-[14px]">star</span> 3.4k</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-outline text-[14px]">fork_right</span> 310</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-secondary font-label-code-sm text-label-code-sm">v2.1.0</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4 leading-relaxed">
+                Động cơ bộ nhớ đệm phân tán hỗ trợ LRU cluster hai tầng, zero-allocation memory serialization và consensus raft đồng bộ. Giảm 38% chi phí compute cho cụm microservices lớn.
+              </p>
+<div class="flex flex-wrap items-center justify-between gap-3 pt-3">
+<div class="flex items-center gap-2 font-label-code-sm text-label-code-sm text-on-surface-variant">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span> Rust 82%
+                  <span class="w-2.5 h-2.5 rounded-full bg-secondary ml-2"></span> Go 18%
+                </div>
+<div class="flex items-center gap-4 text-xs font-label-code-sm text-primary hover:underline cursor-pointer">
+<span>Xem live demo →</span>
+<span>Benchmarks (p99 1.2ms)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: SOCIAL PROOF / TRUST STRIP -->
+<section class="w-full bg-surface-container-lowest py-12 px-6 lg:px-12">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-8">
+<span class="font-label-code-sm text-label-code-sm uppercase tracking-widest text-outline">
+          Tất cả những gì bạn cần để định hình vị thế kỹ sư phần mềm
+        </span>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-6 lg:gap-8 items-center">
+<div class="flex flex-col items-center text-center p-4 rounded-xl bg-surface-container-low shadow-sm">
+<span class="material-symbols-outlined text-primary text-[28px] mb-2">sync_alt</span>
+<span class="font-label-ui text-label-ui text-on-surface font-medium">Tích hợp GitHub</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-xs mt-0.5">Một chạm tự động</span>
+</div>
+<div class="flex flex-col items-center text-center p-4 rounded-xl bg-surface-container-low shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[28px] mb-2">psychology</span>
+<span class="font-label-ui text-label-ui text-on-surface font-medium">AI tinh chỉnh</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-xs mt-0.5">Tác động định lượng</span>
+</div>
+<div class="flex flex-col items-center text-center p-4 rounded-xl bg-surface-container-low shadow-sm">
+<span class="material-symbols-outlined text-tertiary text-[28px] mb-2">devices</span>
+<span class="font-label-ui text-label-ui text-on-surface font-medium">Mẫu giao diện</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-xs mt-0.5">Chuẩn kỹ thuật cao cấp</span>
+</div>
+<div class="flex flex-col items-center text-center p-4 rounded-xl bg-surface-container-low shadow-sm">
+<span class="material-symbols-outlined text-primary-fixed text-[28px] mb-2">description</span>
+<span class="font-label-ui text-label-ui text-on-surface font-medium">CV chuẩn ATS</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-xs mt-0.5">Vượt qua mọi bộ lọc</span>
+</div>
+<div class="col-span-2 md:col-span-1 flex flex-col items-center text-center p-4 rounded-xl bg-surface-container-low shadow-sm">
+<span class="material-symbols-outlined text-secondary-fixed-dim text-[28px] mb-2">language</span>
+<span class="font-label-ui text-label-ui text-on-surface font-medium">Tên miền công khai</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-xs mt-0.5">Edge CDN toàn cầu</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: PROBLEM -> SOLUTION (COMPARISON) -->
+<section class="w-full py-24 px-6 lg:px-12 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+<span class="font-label-code-sm text-label-code-sm text-primary tracking-wider uppercase font-semibold">Góc nhìn Nhà Tuyển Dụng</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          GitHub cho thấy những gì bạn viết.<br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">DevHub cho thấy bạn là ai.</span>
+</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Kho lưu trữ của bạn chứa đựng hàng ngàn dòng code giá trị, nhưng Tech Recruiter chỉ dành 6 giây để quyết định có nên phỏng vấn bạn hay không.
+        </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Before DevHub (The Problem) -->
+<div class="p-8 lg:p-10 rounded-2xl bg-surface-container-lowest shadow-md flex flex-col justify-between">
+<div class="space-y-6">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded-lg bg-error-container/40 text-error flex items-center justify-center font-bold">✕</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Khi chưa dùng DevHub</span>
+</div>
+<span class="font-label-code-sm text-label-code-sm text-error bg-error-container/20 px-3 py-1 rounded-full">Tỷ lệ phản hồi &lt; 5%</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Profile lập trình viên bị phân tán, thiếu context kinh doanh và khiến nhà tuyển dụng bối rối khi tìm kiếm năng lực thực sự.
+            </p>
+<ul class="space-y-4 pt-2">
+<li class="flex items-start gap-3 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5">warning</span>
+<span><strong>Commit message lộn xộn:</strong> Các commit kiểu "fix bug", "update logic" che khuất năng lực giải quyết vấn đề cốt lõi.</span>
+</li>
+<li class="flex items-start gap-3 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5">warning</span>
+<span><strong>Dự án học tập lẫn lộn:</strong> Repository thử nghiệm sinh viên hiển thị ngang hàng với hệ thống viễn trắc doanh nghiệp bạn vừa tạo.</span>
+</li>
+<li class="flex items-start gap-3 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5">warning</span>
+<span><strong>Không có định vị cá nhân:</strong> Không nêu rõ tech stack sở trường, phạm vi trách nhiệm (Ownership) và vai trò lãnh đạo kỹ thuật.</span>
+</li>
+<li class="flex items-start gap-3 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5">warning</span>
+<span><strong>CV bị bộ lọc ATS tự động loại bỏ:</strong> Định dạng PDF nhiều cột, ảnh chân dung hoặc typography phức tạp làm hỏng hệ thống scan.</span>
+</li>
+</ul>
+</div>
+<div class="mt-8 p-4 rounded-xl bg-surface-container-low">
+<span class="font-label-code-sm text-label-code-sm text-on-surface-variant">
+              // Thực tế: 78% hồ sơ kỹ sư xuất sắc bị loại tại vòng CV tự động do parsing lỗi.
+            </span>
+</div>
+</div>
+<!-- After DevHub (The Solution) -->
+<div class="p-8 lg:p-10 rounded-2xl bg-surface-container-low shadow-[0_15px_40px_-5px_rgba(192,193,255,0.2)] flex flex-col justify-between relative overflow-hidden">
+<!-- Soft Gradient Backlight -->
+<div class="absolute -right-20 -top-20 w-72 h-72 bg-primary/20 rounded-full blur-[90px] pointer-events-none"></div>
+<div class="space-y-6 relative z-10">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center font-bold">✓</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Với DevHub</span>
+</div>
+<span class="font-label-code-sm text-label-code-sm text-primary bg-primary/20 px-3 py-1 rounded-full">Lời mời phỏng vấn x3</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Hiện diện với tư cách kỹ sư chuyên nghiệp: số liệu định lượng, kiến trúc minh bạch, và CV sẵn sàng cho vòng phỏng vấn Tech Lead.
+            </p>
+<ul class="space-y-4 pt-2">
+<li class="flex items-start gap-3 text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">check_circle</span>
+<span><strong>Portfolio tuyển dụng ấn tượng:</strong> Giao diện sắc nét chuẩn visual của các công ty công nghệ top đầu Thung lũng Silicon.</span>
+</li>
+<li class="flex items-start gap-3 text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">check_circle</span>
+<span><strong>CV chuẩn hóa cấu trúc ATS:</strong> Tự động dịch chuyển dự án sang dạng PDF 1 cột đạt điểm 100% trên Greenhouse và Lever.</span>
+</li>
+<li class="flex items-start gap-3 text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">check_circle</span>
+<span><strong>Làm nổi bật tác động kinh doanh:</strong> AI biến đổi mô tả repo thành tỷ lệ giảm latency, throughput tải, và doanh số được tối ưu.</span>
+</li>
+<li class="flex items-start gap-3 text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">check_circle</span>
+<span><strong>Kiểm duyệt 1-click cho Tech Lead:</strong> Tự động liên kết live demo, tài liệu swagger/architecture diagrams và benchmark proofs.</span>
+</li>
+</ul>
+</div>
+<div class="mt-8 p-4 rounded-xl bg-surface-container text-on-surface relative z-10 flex items-center justify-between">
+<span class="font-label-code text-label-code text-primary">Tỷ lệ đỗ sàng lọc sơ loại</span>
+<span class="font-headline-sm text-headline-sm text-secondary">94.8%</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: CORE FEATURES (GRID OF 5) -->
+<section class="w-full py-24 px-6 lg:px-12 bg-surface-container-lowest" id="features">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div class="space-y-3">
+<span class="font-label-code-sm text-label-code-sm text-secondary uppercase font-semibold tracking-wider">Hệ Sinh Thái DevHub</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+            Mọi công cụ bạn cần để hiện diện chuyên nghiệp.
+          </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Được thiết kế chuyên sâu cho developer, tự động hóa quy trình tổng hợp hồ sơ năng lực mà không tốn công gõ lại từ đầu.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Feature 1 -->
+<div class="p-8 rounded-2xl bg-surface-container-low shadow-md space-y-5 hover:bg-surface-container transition-all">
+<div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">terminal</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Đồng bộ GitHub trực tiếp</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Tự động trích xuất danh sách kho lưu trữ, số sao, commit streak, và tính toán tỷ lệ phân bổ các ngôn ngữ lập trình theo thời gian thực mà không lộ mã nguồn private.
+          </p>
+<div class="pt-2">
+<span class="inline-flex items-center gap-1 font-label-code-sm text-label-code-sm text-primary">
+              REST API &amp; GraphQL v4 →
+            </span>
+</div>
+</div>
+<!-- Feature 2 -->
+<div class="p-8 rounded-2xl bg-surface-container-low shadow-md space-y-5 hover:bg-surface-container transition-all">
+<div class="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">neurology</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">AI viết hồ sơ kỹ thuật</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            LLM phân tích README, pull requests và kiến trúc commit để chuyển đổi những dòng ghi chú khô khan thành thành tựu định lượng theo chuẩn công thức Google X-Y-Z.
+          </p>
+<div class="pt-2">
+<span class="inline-flex items-center gap-1 font-label-code-sm text-label-code-sm text-secondary">
+              Mô hình GPT-4o tinh chỉnh →
+            </span>
+</div>
+</div>
+<!-- Feature 3 -->
+<div class="p-8 rounded-2xl bg-surface-container-low shadow-md space-y-5 hover:bg-surface-container transition-all">
+<div class="w-12 h-12 rounded-xl bg-tertiary/10 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">palette</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Bộ sưu tập mẫu tinh tế</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Từ giao diện đậm chất Dark IDE, Terminal cổ điển cho đến phong cách Swiss tối giản, từng mẫu đều được tối ưu hóa cho màn hình kỹ sư với typography sắc sảo.
+          </p>
+<div class="pt-2">
+<span class="inline-flex items-center gap-1 font-label-code-sm text-label-code-sm text-tertiary">
+              4 Phong cách độc quyền →
+            </span>
+</div>
+</div>
+<!-- Feature 4 (Spans 2 columns on desktop for asymmetric feel) -->
+<div class="md:col-span-2 p-8 rounded-2xl bg-surface-container-low shadow-md space-y-5 hover:bg-surface-container transition-all flex flex-col justify-between">
+<div class="space-y-4">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed-dim/20 text-primary-fixed-dim flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">fact_check</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Trình tạo CV chuẩn ATS (Greenhouse, Lever, Workday)</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl leading-relaxed">
+              Xuất bản PDF dạng văn bản thuần 1 cột được bảo chứng không bao giờ bị các hệ thống quét CV tự động loại bỏ. Tự động kiểm tra mật độ từ khóa kỹ thuật (Keywords density) phù hợp với vị trí Senior / Tech Lead mong muốn.
+            </p>
+</div>
+<div class="flex flex-wrap items-center gap-4 pt-4">
+<div class="px-3 py-1.5 rounded-lg bg-surface-container font-label-code-sm text-label-code-sm text-on-surface">
+              Điểm tương thích ATS: <span class="text-secondary font-bold">100/100</span>
+</div>
+<div class="px-3 py-1.5 rounded-lg bg-surface-container font-label-code-sm text-label-code-sm text-on-surface">
+              Chuẩn in ấn Vector PDF
+            </div>
+<div class="px-3 py-1.5 rounded-lg bg-surface-container font-label-code-sm text-label-code-sm text-on-surface">
+              Chống vỡ định dạng parser
+            </div>
+</div>
+</div>
+<!-- Feature 5 -->
+<div class="p-8 rounded-2xl bg-surface-container-low shadow-md space-y-5 hover:bg-surface-container transition-all flex flex-col justify-between">
+<div class="space-y-4">
+<div class="w-12 h-12 rounded-xl bg-secondary-container/20 text-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">public</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Tên miền &amp; Edge CDN</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Cung cấp URL ngắn gọn <code class="text-primary font-label-code-sm">devhub.vn/@username</code> hoặc ánh xạ tên miền riêng của bạn (CNAME) với chứng chỉ SSL tự động cấp bởi Cloudflare Edge.
+            </p>
+</div>
+<div class="pt-2">
+<span class="inline-flex items-center gap-1 font-label-code-sm text-label-code-sm text-secondary-container">
+              TTFB toàn cầu &lt; 30ms →
+            </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: HOW IT WORKS (4-STEP TIMELINE) -->
+<section class="w-full py-24 px-6 lg:px-12 bg-surface" id="how-it-works">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-3xl mx-auto mb-20 space-y-3">
+<span class="font-label-code-sm text-label-code-sm text-primary uppercase font-semibold tracking-wider">Quy Trình Hoạt Động</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          Từ GitHub đến hồ sơ chuyên nghiệp chỉ trong vài phút.
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Không cần kéo thả rối rắm, không cần viết mã giao diện thủ công.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
+<!-- Step 1 -->
+<div class="relative p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="space-y-4">
+<span class="font-label-code text-label-code text-primary bg-primary/10 px-2.5 py-1 rounded">BƯỚC 01</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Kết nối GitHub</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Xác thực OAuth 2.0 an toàn. DevHub chỉ đọc metadata công khai và cấu trúc commit, tuyệt đối không can thiệp mã nguồn bí mật.
+            </p>
+</div>
+<div class="mt-6 pt-4 flex items-center gap-2 text-on-surface-variant font-label-code-sm text-label-code-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]">lock_clock</span>
+<span>Zero repo exposure</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="space-y-4">
+<span class="font-label-code text-label-code text-secondary bg-secondary/10 px-2.5 py-1 rounded">BƯỚC 02</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Chọn lọc &amp; Trích xuất</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Chọn các repository trọng tâm mà bạn tự hào nhất. Hệ thống tự động phân tích commit frequency, pull request và tech stacks sử dụng.
+            </p>
+</div>
+<div class="mt-6 pt-4 flex items-center gap-2 text-on-surface-variant font-label-code-sm text-label-code-sm">
+<span class="material-symbols-outlined text-primary text-[16px]">filter_alt</span>
+<span>Tự động khử repo rác</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="space-y-4">
+<span class="font-label-code text-label-code text-tertiary bg-tertiary/10 px-2.5 py-1 rounded">BƯỚC 03</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Tinh chỉnh với AI</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              AI đề xuất tóm tắt chuyên môn, biến đổi commit thô thành các gạch đầu dòng tác động ấn tượng và căn chỉnh từ khóa chuẩn ATS.
+            </p>
+</div>
+<div class="mt-6 pt-4 flex items-center gap-2 text-on-surface-variant font-label-code-sm text-label-code-sm">
+<span class="material-symbols-outlined text-tertiary text-[16px]">magic_button</span>
+<span>Chuẩn cấu trúc X-Y-Z</span>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="relative p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="space-y-4">
+<span class="font-label-code text-label-code text-primary-fixed bg-primary-container/20 px-2.5 py-1 rounded">BƯỚC 04</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Xuất bản &amp; Chia sẻ</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Nhận liên kết công khai tức thì hoặc tải về bản CV PDF chuẩn format để nộp hồ sơ tới các tập đoàn công nghệ lớn.
+            </p>
+</div>
+<div class="mt-6 pt-4 flex items-center gap-2 text-on-surface-variant font-label-code-sm text-label-code-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]">send</span>
+<span>Ready for interview</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: DUAL SHOWCASE (PORTFOLIO + ATS CV SPLIT) -->
+<section class="w-full py-24 px-6 lg:px-12 bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+<span class="font-label-code-sm text-label-code-sm text-primary uppercase font-semibold tracking-wider">Đồng Nhất Năng Lực</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          Bộ đôi quyền lực: Portfolio trực tuyến &amp; CV ATS chuẩn xác
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Dữ liệu kỹ thuật của bạn chỉ cần khai báo một lần duy nhất, DevHub tự động render hai phiên bản tối ưu riêng cho người xem và hệ thống scan tự động.
+        </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Side: Interactive Web Portfolio Preview (7 cols) -->
+<div class="lg:col-span-7 rounded-2xl bg-surface-container-low shadow-xl p-6 lg:p-8">
+<div class="flex items-center justify-between pb-6">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span class="font-label-ui text-label-ui text-on-surface font-semibold">Web Portfolio Tương Tác</span>
+</div>
+<span class="font-label-code-sm text-label-code-sm text-outline">Dành cho: Tech Lead, VP of Eng, HR Manager</span>
+</div>
+<!-- Mini Browser Preview Canvas -->
+<div class="rounded-xl bg-surface-container-lowest p-6 space-y-6">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Minh Nguyen</h3>
+<p class="font-body-sm text-body-sm text-secondary">DevOps &amp; Cloud Architect · Kubernetes Contributor</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface font-label-code-sm text-label-code-sm">GitHub</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface font-label-code-sm text-label-code-sm">LinkedIn</span>
+</div>
+</div>
+<div class="p-4 rounded-lg bg-surface-container space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-primary font-semibold">k8s-mesh-router // Rust</span>
+<span class="font-label-code-sm text-label-code-sm text-outline">★ 1.8k · v1.4.2</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Sidecar proxy phân tán tối ưu hóa luồng giao tiếp gRPC giữa các service pod, giảm p99 latency từ 14ms xuống 3.2ms trên hạ tầng 1,200 nodes.
+              </p>
+<div class="flex gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-primary font-label-code-sm text-label-code-sm">Rust</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-code-sm text-label-code-sm">eBPF</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface font-label-code-sm text-label-code-sm">Envoy API</span>
+</div>
+</div>
+<!-- Activity Heatmap Graphic -->
+<div class="p-4 rounded-lg bg-surface-container space-y-3">
+<div class="flex items-center justify-between text-xs font-label-code-sm text-on-surface-variant">
+<span>Tần suất đóng góp mã nguồn (12 tháng gần nhất)</span>
+<span class="text-secondary font-medium">3,142 commits</span>
+</div>
+<!-- Mock SVG Heatmap -->
+<div class="w-full h-12 flex gap-1 items-end justify-between pt-2">
+<div class="flex-1 bg-surface-container-high h-3 rounded-sm"></div>
+<div class="flex-1 bg-primary/40 h-6 rounded-sm"></div>
+<div class="flex-1 bg-primary/70 h-10 rounded-sm"></div>
+<div class="flex-1 bg-secondary h-8 rounded-sm"></div>
+<div class="flex-1 bg-primary h-12 rounded-sm"></div>
+<div class="flex-1 bg-primary/80 h-7 rounded-sm"></div>
+<div class="flex-1 bg-secondary-fixed-dim h-11 rounded-sm"></div>
+<div class="flex-1 bg-primary h-9 rounded-sm"></div>
+<div class="flex-1 bg-primary/60 h-5 rounded-sm"></div>
+<div class="flex-1 bg-surface-container-high h-2 rounded-sm"></div>
+<div class="flex-1 bg-primary h-10 rounded-sm"></div>
+<div class="flex-1 bg-secondary h-8 rounded-sm"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Side: ATS Resume Preview (5 cols) -->
+<div class="lg:col-span-5 rounded-2xl bg-surface-container-low shadow-xl p-6 lg:p-8">
+<div class="flex items-center justify-between pb-6">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="font-label-ui text-label-ui text-on-surface font-semibold">Bản In CV Chuẩn ATS</span>
+</div>
+<span class="font-label-code-sm text-label-code-sm text-secondary">Greenhouse 100% Pass</span>
+</div>
+<!-- Resume Document Sheet Representation -->
+<div class="rounded-xl bg-surface-container-lowest p-6 space-y-4 font-body-sm text-body-sm text-on-surface-variant">
+<div class="border-b border-surface-variant pb-3 text-center">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">MINH NGUYEN</h4>
+<p class="font-label-code-sm text-label-code-sm text-outline">minh.devops@email.com · (+84) 912 345 678 · TP.HCM</p>
+</div>
+<div class="space-y-1">
+<div class="font-label-ui text-label-ui text-primary uppercase font-bold tracking-wide">Kinh Nghiệm Kỹ Thuật</div>
+<div class="font-body-sm text-body-sm text-on-surface font-semibold">Senior DevOps Engineer — CloudScale Infra</div>
+<div class="font-label-code-sm text-label-code-sm text-outline">03/2022 – Hiện tại | Toàn thời gian</div>
+<ul class="list-disc pl-5 space-y-1 text-xs text-on-surface-variant pt-1">
+<li>Thiết kế hệ thống service mesh đa vùng với Rust và Envoy, xử lý hơn 120M yêu cầu/ngày.</li>
+<li>Tự động hóa pipeline CI/CD với GitHub Actions, cắt giảm thời gian triển khai từ 45p xuống 8p.</li>
+<li>Tối ưu hóa chi phí cụm AWS EKS hàng tháng giảm 34% qua cơ chế auto-scaling thông minh.</li>
+</ul>
+</div>
+<div class="space-y-1 pt-2">
+<div class="font-label-ui text-label-ui text-primary uppercase font-bold tracking-wide">Kỹ Năng Công Nghệ (Keywords)</div>
+<p class="font-label-code-sm text-label-code-sm text-on-surface-variant leading-relaxed">
+                Rust, Go, Python, Kubernetes, Docker, Terraform, AWS, Envoy, Prometheus, Grafana, CI/CD, Helm.
+              </p>
+</div>
+<div class="pt-2">
+<button class="w-full py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-code-sm text-label-code-sm flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">download</span>
+<span>Tải mẫu PDF tương thích ATS</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 7: TEMPLATE SHOWCASE (4 CARDS) -->
+<section class="w-full py-24 px-6 lg:px-12 bg-surface" id="templates">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+<span class="font-label-code-sm text-label-code-sm text-secondary uppercase font-semibold tracking-wider">Thư Viện Giao Diện</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          Bắt đầu với giao diện bạn yêu thích.
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Được thiết kế riêng cho gu thẩm mỹ của dân công nghệ. Chuyển đổi giao diện chỉ bằng 1 cú click chuột mà không mất dữ liệu.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Template 1: Modern -->
+<div class="rounded-2xl bg-surface-container-lowest overflow-hidden shadow-md flex flex-col justify-between group hover:bg-surface-container-low transition-all">
+<div>
+<div class="h-44 bg-surface-container relative p-4 flex flex-col justify-between overflow-hidden">
+<div class="w-full h-full rounded-lg bg-surface-container-high p-3 space-y-2 opacity-90">
+<div class="w-1/2 h-3 rounded bg-primary/40"></div>
+<div class="w-3/4 h-2 rounded bg-surface-variant"></div>
+<div class="flex gap-2 pt-2">
+<div class="w-8 h-8 rounded bg-primary/20"></div>
+<div class="flex-1 space-y-1">
+<div class="w-full h-2 rounded bg-surface-variant"></div>
+<div class="w-2/3 h-2 rounded bg-surface-variant"></div>
+</div>
+</div>
+</div>
+<span class="absolute top-3 right-3 px-2 py-0.5 rounded bg-surface-container-lowest text-primary font-label-code-sm text-label-code-sm">Phổ Biến</span>
+</div>
+<div class="p-5 space-y-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Modern (Hiện đại)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Lớp phủ kính mờ glassmorphic, tương phản cao, thẻ dự án nổi bật phong cách fintech và web3.
+              </p>
+</div>
+</div>
+<div class="p-5 pt-0 flex items-center gap-2">
+<button class="flex-1 py-2 rounded-lg bg-surface-container-high text-on-surface font-label-ui text-label-ui text-xs hover:bg-surface-variant transition-colors">Xem trước</button>
+<button class="flex-1 py-2 rounded-lg bg-primary text-on-primary font-label-ui text-label-ui text-xs hover:bg-primary-fixed transition-colors font-medium">Dùng mẫu này</button>
+</div>
+</div>
+<!-- Template 2: Minimal -->
+<div class="rounded-2xl bg-surface-container-lowest overflow-hidden shadow-md flex flex-col justify-between group hover:bg-surface-container-low transition-all">
+<div>
+<div class="h-44 bg-surface-container relative p-4 flex flex-col justify-between overflow-hidden">
+<div class="w-full h-full rounded-lg bg-surface-container-lowest p-3 space-y-3">
+<div class="w-1/3 h-3 rounded bg-on-surface"></div>
+<div class="w-full h-1 rounded bg-outline-variant"></div>
+<div class="w-5/6 h-2 rounded bg-surface-variant"></div>
+<div class="w-4/6 h-2 rounded bg-surface-variant"></div>
+</div>
+</div>
+<div class="p-5 space-y-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Minimal (Tối giản)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Cảm hứng từ phong cách Thụy Sĩ: tập trung tuyệt đối vào khoảng trắng, typography và sự cô đọng.
+              </p>
+</div>
+</div>
+<div class="p-5 pt-0 flex items-center gap-2">
+<button class="flex-1 py-2 rounded-lg bg-surface-container-high text-on-surface font-label-ui text-label-ui text-xs hover:bg-surface-variant transition-colors">Xem trước</button>
+<button class="flex-1 py-2 rounded-lg bg-primary text-on-primary font-label-ui text-label-ui text-xs hover:bg-primary-fixed transition-colors font-medium">Dùng mẫu này</button>
+</div>
+</div>
+<!-- Template 3: Developer / Terminal -->
+<div class="rounded-2xl bg-surface-container-lowest overflow-hidden shadow-md flex flex-col justify-between group hover:bg-surface-container-low transition-all">
+<div>
+<div class="h-44 bg-surface-container-lowest relative p-4 flex flex-col justify-between overflow-hidden">
+<div class="w-full h-full rounded-lg bg-surface-container-low p-3 font-label-code-sm text-label-code-sm text-secondary space-y-1">
+<div>$ whoami</div>
+<div class="text-on-surface-variant">&gt; Lead Architect</div>
+<div class="text-primary">$ cat skills.json</div>
+<div class="text-outline">[Go, Rust, K8s]</div>
+</div>
+<span class="absolute top-3 right-3 px-2 py-0.5 rounded bg-secondary/10 text-secondary font-label-code-sm text-label-code-sm">Dev Pick</span>
+</div>
+<div class="p-5 space-y-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Developer (Terminal)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Giao diện CLI hoài cổ kết hợp IDE hiện đại, hỗ trợ gõ lệnh tìm kiếm nhanh cho Tech Lead.
+              </p>
+</div>
+</div>
+<div class="p-5 pt-0 flex items-center gap-2">
+<button class="flex-1 py-2 rounded-lg bg-surface-container-high text-on-surface font-label-ui text-label-ui text-xs hover:bg-surface-variant transition-colors">Xem trước</button>
+<button class="flex-1 py-2 rounded-lg bg-primary text-on-primary font-label-ui text-label-ui text-xs hover:bg-primary-fixed transition-colors font-medium">Dùng mẫu này</button>
+</div>
+</div>
+<!-- Template 4: Professional -->
+<div class="rounded-2xl bg-surface-container-lowest overflow-hidden shadow-md flex flex-col justify-between group hover:bg-surface-container-low transition-all">
+<div>
+<div class="h-44 bg-surface-container relative p-4 flex flex-col justify-between overflow-hidden">
+<div class="w-full h-full rounded-lg bg-surface-container-high p-3 space-y-2">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-secondary-fixed-dim"></div>
+<div class="w-1/3 h-2 rounded bg-on-surface"></div>
+</div>
+<div class="w-full h-10 rounded bg-surface-container p-2 flex items-center justify-between">
+<div class="w-1/2 h-2 rounded bg-surface-variant"></div>
+<div class="w-1/4 h-2 rounded bg-secondary"></div>
+</div>
+</div>
+</div>
+<div class="p-5 space-y-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Professional (Doanh nghiệp)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Lịch lãm, trang trọng, tối ưu cho các vị trí Engineering Manager, Solution Architect hoặc CTO.
+              </p>
+</div>
+</div>
+<div class="p-5 pt-0 flex items-center gap-2">
+<button class="flex-1 py-2 rounded-lg bg-surface-container-high text-on-surface font-label-ui text-label-ui text-xs hover:bg-surface-variant transition-colors">Xem trước</button>
+<button class="flex-1 py-2 rounded-lg bg-primary text-on-primary font-label-ui text-label-ui text-xs hover:bg-primary-fixed transition-colors font-medium">Dùng mẫu này</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 8: AI TRANSFORMATION SECTION (DIFF UI) -->
+<section class="w-full py-24 px-6 lg:px-12 bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+<span class="font-label-code-sm text-label-code-sm text-tertiary uppercase font-semibold tracking-wider">DevHub AI Engine</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          Để AI kể lại hành trình kỹ thuật của bạn.
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Chuyển hóa mã nguồn và nhật ký commit thô kệch thành các tuyên ngôn định lượng có sức nặng trực tiếp với bộ phận tuyển dụng cấp cao.
+        </p>
+</div>
+<!-- Diff / Transformation Mockup Card -->
+<div class="max-w-4xl mx-auto rounded-2xl bg-surface-container-low shadow-2xl p-6 md:p-10 space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- BEFORE Box -->
+<div class="p-6 rounded-xl bg-surface-container-lowest space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-label-code-sm text-label-code-sm text-error uppercase font-medium">Dữ Liệu Thô (GitHub Commit)</span>
+<span class="material-symbols-outlined text-error text-[18px]">close</span>
+</div>
+<div class="p-3 rounded bg-surface-container font-label-code text-label-code text-on-surface-variant">
+<code>git commit -m "fixed race condition in redis pool and reduced connection dropouts"</code>
+</div>
+<p class="font-body-sm text-body-sm text-outline leading-relaxed">
+              Nhà tuyển dụng không thể đo lường bạn đã đóng góp bao nhiêu phần trăm cải thiện cho công ty và quy mô dự án là bao nhiêu.
+            </p>
+</div>
+<!-- AFTER Box -->
+<div class="p-6 rounded-xl bg-surface-container space-y-3 shadow-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-code-sm text-label-code-sm text-secondary uppercase font-medium">Sau Tối Ưu Với AI</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">auto_awesome</span>
+</div>
+<div class="p-3 rounded bg-surface-container-high font-body-sm text-body-sm text-on-surface font-medium leading-relaxed">
+              "Đã tái kiến trúc bộ kết nối distributed caching, loại bỏ hoàn toàn deadlock và <span class="text-primary font-semibold">giảm 42% timeout</span> dưới tải thực tế <span class="text-secondary font-semibold">10,000 req/giây</span>."
+            </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Tuân thủ chuẩn Google X-Y-Z: Nêu bật vấn đề giải quyết, hành động kiến trúc và số liệu tác động đo đếm được.
+            </p>
+</div>
+</div>
+<div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="w-3 h-3 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-code-sm text-label-code-sm text-on-surface-variant">Hỗ trợ trích xuất từ 45+ ngôn ngữ &amp; framework phổ biến</span>
+</div>
+<button class="inline-flex items-center gap-2 px-6 py-2.5 rounded-lg bg-tertiary-container hover:bg-tertiary text-on-tertiary-container font-label-ui text-label-ui font-semibold shadow-md transition-all">
+<span class="material-symbols-outlined text-[18px]">auto_fix_high</span>
+<span>Tối ưu hóa với AI</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 9: PRICING SECTION (2 CARDS) -->
+<section class="w-full py-24 px-6 lg:px-12 bg-surface" id="pricing">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+<span class="font-label-code-sm text-label-code-sm text-primary uppercase font-semibold tracking-wider">Chi Phí Minh Bạch</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          Bắt đầu miễn phí. Nâng cấp khi bạn sẵn sàng.
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Không yêu cầu thẻ tín dụng khi đăng ký. Hủy gói bất cứ lúc nào.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch">
+<!-- FREE TIER -->
+<div class="p-8 lg:p-10 rounded-2xl bg-surface-container-lowest shadow-md flex flex-col justify-between">
+<div class="space-y-6">
+<div class="space-y-2">
+<span class="font-label-code text-label-code text-outline uppercase font-semibold">MIỄN PHÍ</span>
+<div class="flex items-baseline gap-1">
+<span class="font-display-hero-mobile text-display-hero-mobile text-on-surface">0đ</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ mãi mãi</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Dành cho cá nhân mới bắt đầu và sinh viên chuẩn bị tốt nghiệp.</p>
+</div>
+<ul class="space-y-3 pt-4">
+<li class="flex items-center gap-3 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+<span>Tạo 01 Web Portfolio cá nhân</span>
+</li>
+<li class="flex items-center gap-3 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+<span>Mẫu giao diện cơ bản (Modern &amp; Minimal)</span>
+</li>
+<li class="flex items-center gap-3 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+<span>Trình tạo CV ATS xuất file PDF (Watermark nhỏ)</span>
+</li>
+<li class="flex items-center gap-3 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+<span>URL công khai: devhub.vn/@username</span>
+</li>
+<li class="flex items-center gap-3 font-body-sm text-body-sm text-outline">
+<span class="material-symbols-outlined text-outline text-[18px]">close</span>
+<span>Tên miền riêng (Custom domain)</span>
+</li>
+</ul>
+</div>
+<div class="pt-8">
+<a class="w-full inline-flex items-center justify-center py-3 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-ui text-label-ui transition-colors" href="#builder">
+              Bắt đầu miễn phí
+            </a>
+</div>
+</div>
+<!-- PRO TIER -->
+<div class="p-8 lg:p-10 rounded-2xl bg-surface-container-low shadow-[0_20px_50px_-10px_rgba(192,193,255,0.25)] flex flex-col justify-between relative overflow-hidden">
+<div class="space-y-6">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-primary uppercase font-semibold">CHUYÊN NGHIỆP (PRO)</span>
+<span class="px-2.5 py-0.5 rounded-full bg-primary/20 text-primary font-label-code-sm text-label-code-sm">Khuyên dùng</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-display-hero-mobile text-display-hero-mobile text-on-surface">149.000đ</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ tháng (thanh toán năm)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Dành cho lập trình viên muốn tạo lợi thế vượt trội khi săn việc.</p>
+<ul class="space-y-3 pt-4">
+<li class="flex items-center gap-3 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+<span>Toàn bộ quyền lợi gói Miễn phí</span>
+</li>
+<li class="flex items-center gap-3 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+<span>Mở khóa toàn bộ Mẫu cao cấp &amp; Terminal themes</span>
+</li>
+<li class="flex items-center gap-3 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+<span>Hỗ trợ Tên miền riêng (Domain CNAME + Free SSL)</span>
+</li>
+<li class="flex items-center gap-3 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+<span>Tối ưu AI không giới hạn (Bullet points &amp; ATS match)</span>
+</li>
+<li class="flex items-center gap-3 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+<span>Phân tích lượt xem và báo cáo nhà tuyển dụng truy cập</span>
+</li>
+</ul>
+</div>
+<div class="pt-8">
+<a class="w-full inline-flex items-center justify-center py-3.5 rounded-lg bg-primary hover:bg-primary-fixed text-on-primary font-label-ui text-label-ui shadow-[0_0_20px_-3px_rgba(192,193,255,0.45)] transition-all font-semibold" href="#builder">
+              Nâng cấp lên Pro
+            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 10: FINAL CTA SECTION -->
+<section class="w-full py-24 px-6 lg:px-12 bg-surface-container-lowest relative overflow-hidden">
+<!-- Atmospheric Glow -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="w-[600px] h-[300px] bg-primary/10 rounded-full blur-[140px]"></div>
+</div>
+<div class="max-w-4xl mx-auto text-center relative z-10 space-y-8">
+<h2 class="font-headline-lg text-headline-lg md:text-display-hero-mobile text-on-surface tracking-tight">
+        Cơ hội tiếp theo bắt đầu từ <br class="hidden sm:inline"/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary-fixed to-secondary">cách bạn thể hiện bản thân.</span>
+</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+        Xây dựng Portfolio và CV lập trình viên của bạn với DevHub ngay hôm nay. Chỉ mất chưa đầy 3 phút để có một diện mạo đẳng cấp.
+      </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-primary hover:bg-primary-fixed text-on-primary font-label-ui text-label-ui shadow-[0_0_25px_-3px_rgba(192,193,255,0.5)] transition-all transform hover:scale-[1.01]" href="#builder">
+<span>Tạo Portfolio của tôi</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-ui text-label-ui transition-all" href="#templates">
+<span>Khám phá Mẫu giao diện</span>
+</a>
+</div>
+<div class="pt-6 font-label-code-sm text-label-code-sm text-outline">
+        Đã có hơn 14,200+ kỹ sư phần mềm tin dùng để gia nhập các tập đoàn công nghệ.
+      </div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-lowest text-on-surface-variant"><div class="max-w-7xl mx-auto px-6 lg:px-12 py-16"><div class="grid grid-cols-2 md:grid-cols-5 gap-8 lg:gap-12 mb-12"><div class="col-span-2 space-y-4"><div class="flex items-center gap-3"><img alt="DevHub Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UhWtEqRGhibuqJYbVUfvopu6F3zRn-NGIlO15gXUPf2pFiRiizaUQUP6TZoTdWzZErZQLs5p_zO0DbtXvV2VcTxPezOZ9YCDUjbuC1tdqCrwWjzt23GliQsUplW0bb77-WWh0MFT1eubPQBZp-DitmMIqUlaJnU6KfM8RBIWtX_Aj34dXBysv_r-0uzqJeuD97AyzLhCtL_e8hxKBIUtKOT8554tn63b1o7xfzCqJbeUBExG4oYoZaO6A"/><span class="font-headline-sm text-headline-sm text-on-surface">DevHub</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Nền tảng kiến tạo hồ sơ kỹ sư chuyên nghiệp và CV chuẩn ATS trực tiếp từ kho lưu trữ GitHub và dữ liệu đóng góp mã nguồn mở.</p></div><div class="flex flex-col gap-3"><span class="font-label-ui text-label-ui text-on-surface">Sản phẩm</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="features" href="#">Tính năng</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="templates" href="#">Mẫu giao diện</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="pricing" href="#">Bảng giá</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="builder" href="#">Trình tạo CV ATS</a></div><div class="flex flex-col gap-3"><span class="font-label-ui text-label-ui text-on-surface">Tài nguyên</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="how-it-works" href="#">Cách hoạt động</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="docs" href="#">Tài liệu API</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="showcase" href="#">Bộ sưu tập Profile</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="blog" href="#">Blog kỹ thuật</a></div><div class="flex flex-col gap-3"><span class="font-label-ui text-label-ui text-on-surface">Công ty</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="about" href="#">Về chúng tôi</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="careers" href="#">Tuyển dụng</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="privacy" href="#">Pháp lý &amp; Bảo mật</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="terms" href="#">Điều khoản sử dụng</a></div></div><div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-body-sm text-body-sm"><p>© 2026 DevHub. Bản quyền đã được bảo lưu.</p><div class="flex items-center gap-6"><span class="font-label-code-sm text-label-code-sm text-on-surface-variant">build: v2.4.0-release</span><div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-label-code-sm text-label-code-sm text-on-surface-variant">Tất cả dịch vụ hoạt động bình thường</span></div></div></div></div></footer></body></html>

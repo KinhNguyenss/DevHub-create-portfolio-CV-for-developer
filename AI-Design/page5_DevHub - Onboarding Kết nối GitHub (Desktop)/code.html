@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-secondary-fixed-variant":"#004c69","surface-container-low":"#171b26","background":"#0f131d","error-container":"#93000a","outline":"#908fa0","on-tertiary":"#490080","outline-variant":"#464554","on-tertiary-container":"#400071","on-error-container":"#ffdad6","primary-fixed":"#e1e0ff","tertiary":"#ddb7ff","inverse-primary":"#494bd6","primary-fixed-dim":"#c0c1ff","surface-variant":"#313540","surface-bright":"#353944","surface-container":"#1c1f2a","on-surface":"#dfe2f1","error":"#ffb4ab","on-primary":"#1000a9","surface-dim":"#0f131d","tertiary-container":"#b76dff","inverse-on-surface":"#2c303b","secondary-container":"#00a6e0","surface":"#0f131d","on-primary-fixed-variant":"#2f2ebe","primary":"#c0c1ff","surface-container-high":"#262a35","on-surface-variant":"#c7c4d7","secondary-fixed":"#c4e7ff","primary-container":"#8083ff","tertiary-fixed":"#f0dbff","surface-container-highest":"#313540","on-secondary-fixed":"#001e2c","tertiary-fixed-dim":"#ddb7ff","on-error":"#690005","on-background":"#dfe2f1","on-primary-container":"#0d0096","surface-container-lowest":"#0a0e18","secondary-fixed-dim":"#7bd0ff","secondary":"#7bd0ff","on-tertiary-fixed-variant":"#6900b3","on-secondary":"#00354a","on-primary-fixed":"#07006c","surface-tint":"#c0c1ff","on-secondary-container":"#00374d","inverse-surface":"#dfe2f1","on-tertiary-fixed":"#2c0051"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-sm":"0.5rem","space-md":"1rem","space-xl":"2.5rem","space-xs":"0.25rem","space-lg":"1.5rem","gutter-mobile":"1rem","margin-mobile":"1rem","gutter":"1.5rem","margin":"2rem"},fontFamily:{"headline-lg":["Geist"],"label-code-sm":["JetBrains Mono"],"headline-sm":["Geist"],"body-lg":["Inter"],"headline-md":["Geist"],"display-hero-mobile":["Geist"],"headline-lg-mobile":["Geist"],"label-code":["JetBrains Mono"],"body-md":["Inter"],"label-ui":["Inter"],"display-hero":["Geist"],"body-sm":["Inter"]},fontSize:{"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-code-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"400"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-hero-mobile":["36px",{"lineHeight":"42px","letterSpacing":"-0.025em","fontWeight":"700"}],"headline-lg-mobile":["28px",{"lineHeight":"34px","letterSpacing":"-0.015em","fontWeight":"600"}],"label-code":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"body-md":["15px",{"lineHeight":"24px","fontWeight":"400"}],"label-ui":["14px",{"lineHeight":"20px","letterSpacing":"-0.005em","fontWeight":"500"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.03em","fontWeight":"700"}],"body-sm":["13px",{"lineHeight":"20px","fontWeight":"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface min-h-screen flex flex-col justify-between selection:bg-primary selection:text-on-primary"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.24)]"><div class="h-16 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between"><div class="flex items-center gap-3"><span class="font-headline-sm text-headline-sm font-semibold tracking-tight text-on-surface">DevHub</span><span class="font-label-code-sm text-label-code-sm uppercase tracking-wider px-2 py-0.5 rounded bg-surface-container text-primary">SETUP WIZARD</span></div><div class="flex items-center gap-4"><a class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors font-label-ui text-label-ui" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">close</span><span>Thoát</span></a></div></div></header><main class="w-full flex-1 pt-16 bg-surface"><div class="flex flex-col w-full">
+<!-- Interactive Style Scrim & Glow Aura -->
+<div class="relative w-full overflow-hidden pb-16">
+<!-- Ambient Compute Backlight Glows -->
+<div class="pointer-events-none absolute -top-40 left-1/4 h-96 w-96 rounded-full bg-primary/10 blur-[120px]"></div>
+<div class="pointer-events-none absolute top-1/3 right-10 h-80 w-80 rounded-full bg-secondary/10 blur-[140px]"></div>
+<div class="pointer-events-none absolute -bottom-20 left-1/3 h-72 w-72 rounded-full bg-tertiary-container/10 blur-[130px]"></div>
+<!-- MAIN CONTAINER (1200px Grid Baseline) -->
+<div class="relative mx-auto max-w-7xl px-6 lg:px-12">
+<!-- TOP SECTION: WIZARD PROGRESS BAR -->
+<section class="py-8">
+<div class="flex flex-col gap-5 bg-surface-container-low/90 backdrop-blur-xl p-6 rounded-xl shadow-xl">
+<!-- Step Topline Meta -->
+<div class="flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container/20 text-secondary font-label-code-sm text-label-code-sm uppercase tracking-wider shadow-[0_0_12px_rgba(123,208,255,0.25)]">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                BƯỚC 2 / 4
+              </span>
+<span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Kết nối nguồn dữ liệu GitHub</span>
+</div>
+<div class="flex items-center gap-2 font-label-code-sm text-label-code-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">terminal</span>
+<span>DEVHUB ENGINE: OAUTH V2 PIPELINE</span>
+</div>
+</div>
+<!-- 4-Step Visual Tracker -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 pt-2">
+<!-- Step 1: Done -->
+<div class="flex items-center gap-3 p-2.5 rounded-lg bg-surface-container">
+<div class="w-7 h-7 rounded-full bg-secondary/20 text-secondary flex items-center justify-center font-label-code text-label-code">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-code-sm text-label-code-sm text-outline">01</span>
+<span class="font-label-ui text-label-ui font-medium text-on-surface truncate">Mục tiêu cá nhân</span>
+</div>
+</div>
+<!-- Step 2: Active -->
+<div class="flex items-center gap-3 p-2.5 rounded-lg bg-surface-container-high shadow-md">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-code text-label-code font-semibold shadow-[0_0_14px_rgba(192,193,255,0.6)]">
+                02
+              </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-code-sm text-label-code-sm text-primary font-semibold">HIỆN TẠI</span>
+<span class="font-label-ui text-label-ui font-semibold text-primary truncate">GitHub Sync</span>
+</div>
+</div>
+<!-- Step 3: Upcoming -->
+<div class="flex items-center gap-3 p-2.5 rounded-lg bg-surface-container-lowest/60 opacity-60">
+<div class="w-7 h-7 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center font-label-code text-label-code">
+                03
+              </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-code-sm text-label-code-sm text-outline">SẮP TỚI</span>
+<span class="font-label-ui text-label-ui text-on-surface-variant truncate">Thiết lập Hồ sơ</span>
+</div>
+</div>
+<!-- Step 4: Final -->
+<div class="flex items-center gap-3 p-2.5 rounded-lg bg-surface-container-lowest/60 opacity-60">
+<div class="w-7 h-7 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center font-label-code text-label-code">
+                04
+              </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-code-sm text-label-code-sm text-outline">SẮP TỚI</span>
+<span class="font-label-ui text-label-ui text-on-surface-variant truncate">Hoàn tất Portfolio</span>
+</div>
+</div>
+</div>
+<!-- Sleek Thin 50% Progress Track -->
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-secondary via-primary to-primary-container w-1/2 transition-all duration-700 ease-out shadow-[0_0_8px_rgba(192,193,255,0.8)]"></div>
+</div>
+</div>
+</section>
+<!-- MAIN 2-COLUMN BALANCED WORKSPACE -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start pb-12">
+<!-- LEFT COLUMN: Transformation Journey & Value Props (~7 cols / ~58%) -->
+<div class="lg:col-span-7 flex flex-col gap-8">
+<!-- Typography Header Group -->
+<div class="flex flex-col gap-3">
+<div class="inline-flex items-center gap-2 font-label-code-sm text-label-code-sm text-primary uppercase tracking-widest">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-primary"></span>
+              Đồng bộ dữ liệu kỹ thuật thời gian thực
+            </div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">
+              Kết nối GitHub của bạn
+            </h1>
+<p class="font-body-lg text-body-lg text-secondary font-normal leading-relaxed">
+              Để DevHub tự động xây dựng Portfolio và CV từ những gì bạn đã làm.
+            </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Kết nối GitHub để hệ sinh thái AI phân tích các commit, PR, repositories xuất sắc và trích xuất cấu trúc thành tựu phù hợp chuẩn nhà tuyển dụng quốc tế.
+            </p>
+</div>
+<!-- 4 GitHub Data Benefits (High Density Grid) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+<!-- Benefit 1 -->
+<div class="p-4 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col gap-2">
+<div class="w-9 h-9 rounded-lg bg-primary-container/20 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">folder_code</span>
+</div>
+<span class="font-label-ui text-label-ui font-semibold text-on-surface">Kho mã Repository</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Tự động trích xuất các dự án GitHub tiêu biểu, kiến trúc cây thư mục và cấu trúc module.
+              </p>
+</div>
+<!-- Benefit 2 -->
+<div class="p-4 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col gap-2">
+<div class="w-9 h-9 rounded-lg bg-secondary-container/20 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+</div>
+<span class="font-label-ui text-label-ui font-semibold text-on-surface">Ngôn ngữ &amp; Tech Stack</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Định lượng công nghệ lõi và tỷ lệ dòng mã thực tế (Byte breakdown) thay vì kỹ năng cảm tính.
+              </p>
+</div>
+<!-- Benefit 3 -->
+<div class="p-4 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col gap-2">
+<div class="w-9 h-9 rounded-lg bg-tertiary-container/20 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">star_rate</span>
+</div>
+<span class="font-label-ui text-label-ui font-semibold text-on-surface">Stars &amp; Đóng góp</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Chứng thực sức ảnh hưởng cộng đồng, pull requests được merge và commit timeline liên tục.
+              </p>
+</div>
+<!-- Benefit 4 -->
+<div class="p-4 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col gap-2">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest text-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</div>
+<span class="font-label-ui text-label-ui font-semibold text-on-surface">Hồ sơ Developer</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Đồng bộ avatar, bio, tổ chức kỹ thuật và danh tính verified để hoàn thiện portfolio trong 1 chạm.
+              </p>
+</div>
+</div>
+<!-- Product UI Transformation Visual (GitHub Raw -> DevHub Portfolio) -->
+<div class="flex flex-col gap-3 p-5 rounded-xl bg-surface-container-lowest shadow-2xl relative">
+<div class="flex items-center justify-between">
+<span class="font-label-code-sm text-label-code-sm uppercase tracking-wider text-outline">Quy trình biến đổi dữ liệu tự động</span>
+<span class="font-label-code-sm text-label-code-sm px-2 py-0.5 rounded bg-surface-container-high text-secondary">ATS COMPLIANT 98.4%</span>
+</div>
+<!-- Top Raw GitHub Card -->
+<div class="p-4 rounded-lg bg-surface-container-low flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<svg class="w-5 h-5 text-on-surface fill-current" viewbox="0 0 24 24">
+<path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path>
+</svg>
+<span class="font-label-code text-label-code font-semibold text-on-surface">github.com/alexchen</span>
+</div>
+<span class="font-label-code-sm text-label-code-sm text-outline">Dữ liệu thô</span>
+</div>
+<div class="flex flex-wrap items-center gap-3 font-label-code-sm text-label-code-sm text-on-surface-variant">
+<span class="text-tertiary">★ 128 stars</span>
+<span>•</span>
+<span>📦 24 repositories</span>
+<span>•</span>
+<span>Rust (65%), Go (25%), TypeScript (10%)</span>
+</div>
+</div>
+<!-- Transformation Divider with Pulse -->
+<div class="flex items-center justify-center my-0.5">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary/10 text-primary font-label-code-sm text-label-code-sm shadow-[0_0_15px_rgba(192,193,255,0.2)] animate-pulse">
+<span class="material-symbols-outlined text-[16px]">auto_awesome</span>
+<span>DevHub AI trích xuất &amp; biên dịch kiến trúc kỹ thuật</span>
+<span class="material-symbols-outlined text-[16px]">arrow_downward</span>
+</div>
+</div>
+<!-- Bottom Formatted DevHub Card -->
+<div class="p-4 rounded-lg bg-surface-container-high flex flex-col gap-3 shadow-md">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-variant flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Chân dung lập trình viên cao cấp với phong cách ánh sáng màu xanh tím kỹ thuật tối giản studio chất lượng cao" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJ8sXLfLoMvoiuSfFerQcNhu4eLgxWDRDXezJ0CDV7h2jch4Za8gArVS5N_u-fU0qnWzh7f2qmJaGT3R79-6mmmYL0v4PG763RrSl9p3eh0CUwV77ZJhvfI7CkzpaWocfq5iMnvvssWaIZ6cYaxadMAG8_HLLfGyL7ydZ5awvlLf9xsjTODHzHgy-3JJfBGAEGxd9WMhV9NWw2Gxz74JWWjCY0faSNdz5JymqygZ8EQv65ps_KbzYW"/>
+</div>
+<div>
+<h2 class="font-label-ui text-label-ui font-semibold text-on-surface">Alex Chen</h2>
+<p class="font-label-code-sm text-label-code-sm text-secondary">Senior Distributed Systems Engineer</p>
+</div>
+</div>
+<div class="font-label-code-sm text-label-code-sm px-2 py-0.5 rounded bg-surface-container text-outline">
+                  devhub.io/alexchen
+                </div>
+</div>
+<!-- Executive Project Showcase Item -->
+<div class="p-3 rounded-md bg-surface-container-lowest flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code font-semibold text-primary">distributed-cache-engine</span>
+<span class="font-label-code-sm text-label-code-sm text-tertiary">Rust · High Throughput</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-snug">
+                  Đã tối ưu bộ nhớ đệm phân tán đạt 1.2M QPS với p99 latency &lt; 1.4ms bằng kỹ thuật non-blocking concurrency và zero-copy serialization.
+                </p>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Interactive GitHub Connection Card (~5 cols / ~42%) -->
+<div class="lg:col-span-5 flex flex-col gap-4">
+<!-- State Controller Bar (For interactive demo review) -->
+<div class="flex flex-col gap-2 p-2 rounded-xl bg-surface-container-low shadow-sm">
+<span class="font-label-code-sm text-label-code-sm px-2 text-outline uppercase tracking-wider">Mô phỏng trạng thái kết nối:</span>
+<div class="grid grid-cols-3 sm:grid-cols-5 gap-1 font-label-code-sm text-label-code-sm" id="state-tabs">
+<button class="py-1 px-1.5 rounded text-center transition-all bg-primary text-on-primary font-medium" id="tab-default" onclick="switchState('default')" type="button">Mặc định</button>
+<button class="py-1 px-1.5 rounded text-center transition-all text-on-surface-variant hover:bg-surface-container" id="tab-connecting" onclick="switchState('connecting')" type="button">Đang kết nối</button>
+<button class="py-1 px-1.5 rounded text-center transition-all text-on-surface-variant hover:bg-surface-container" id="tab-importing" onclick="switchState('importing')" type="button">Đang nhập</button>
+<button class="py-1 px-1.5 rounded text-center transition-all text-on-surface-variant hover:bg-surface-container" id="tab-connected" onclick="switchState('connected')" type="button">Thành công</button>
+<button class="py-1 px-1.5 rounded text-center transition-all text-on-surface-variant hover:bg-surface-container" id="tab-error" onclick="switchState('error')" type="button">Lỗi</button>
+</div>
+</div>
+<!-- THE CONNECTION CARD -->
+<div class="w-full rounded-2xl bg-surface-container-low/95 p-6 sm:p-8 flex flex-col gap-6 shadow-[0_20px_50px_-10px_rgba(0,0,0,0.7)] backdrop-blur-2xl relative overflow-hidden">
+<!-- STATE: 1. DEFAULT -->
+<div class="state-view flex flex-col gap-6" id="view-default">
+<!-- Top Branding Header -->
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-highest flex items-center justify-center shadow-[0_0_24px_rgba(192,193,255,0.2)]">
+<svg class="w-8 h-8 text-on-surface fill-current" viewbox="0 0 24 24">
+<path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md font-semibold text-on-surface tracking-tight">Kết nối với GitHub</h3>
+<p class="font-label-code-sm text-label-code-sm text-secondary">Ủy quyền ứng dụng DevHub Enterprise</p>
+</div>
+</div>
+<!-- Description -->
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Cho phép DevHub truy cập an toàn vào dữ liệu GitHub công khai cần thiết để kiến tạo Portfolio và CV chuẩn kỹ sư phần mềm.
+              </p>
+<!-- Permission Checklist Container -->
+<div class="flex flex-col gap-2.5 p-4 rounded-xl bg-surface-container">
+<span class="font-label-code-sm text-label-code-sm uppercase tracking-wider text-outline">DevHub sẽ đọc các thông tin:</span>
+<ul class="flex flex-col gap-2 font-label-ui text-label-ui text-on-surface">
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+<span>Thông tin hồ sơ công khai (Tên, avatar, tiểu sử)</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+<span>Repository công khai và thông tin mô tả dự án</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+<span>Ngôn ngữ lập trình và tỷ lệ dòng mã đóng góp</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+<span>Lịch sử stars và mức độ đóng góp (commit activity)</span>
+</li>
+</ul>
+</div>
+<!-- Security / Privacy Note -->
+<div class="flex items-start gap-3 p-3.5 rounded-lg bg-surface-container-lowest">
+<span class="material-symbols-outlined text-[20px] text-primary shrink-0">verified_user</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-normal">
+                  Bạn có thể ngắt kết nối GitHub bất cứ lúc nào trong Workspace. DevHub cam kết chỉ sử dụng dữ liệu cần thiết để phục vụ xây dựng Portfolio &amp; CV.
+                </p>
+</div>
+<!-- Primary Action Button -->
+<div class="flex flex-col gap-3">
+<button class="w-full h-12 rounded-lg bg-gradient-to-r from-primary-container to-inverse-primary hover:opacity-95 text-white font-label-ui text-label-ui font-semibold flex items-center justify-center gap-3 transition-transform active:scale-[0.99] shadow-[0_0_24px_rgba(128,131,255,0.45)]" onclick="switchState('connecting')" type="button">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
+<path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path>
+</svg>
+<span>Kết nối với GitHub</span>
+</button>
+<!-- Secondary Skip Option -->
+<div class="text-center pt-1">
+<a class="font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface transition-colors inline-block py-1" data-path="profile-setup" href="#">
+                    Bỏ qua bước này
+                  </a>
+<p class="font-label-code-sm text-label-code-sm text-outline mt-0.5">
+                    Bạn có thể kết nối GitHub sau trong phần Cài đặt Workspace.
+                  </p>
+</div>
+</div>
+</div>
+<!-- STATE: 2. CONNECTING -->
+<div class="state-view hidden flex flex-col items-center justify-center text-center py-10 gap-6" id="view-connecting">
+<div class="relative w-16 h-16 flex items-center justify-center">
+<div class="absolute inset-0 rounded-full border-2 border-primary/20 animate-ping"></div>
+<div class="w-14 h-14 rounded-full border-4 border-primary border-t-transparent animate-spin"></div>
+<svg class="w-6 h-6 text-primary fill-current absolute" viewbox="0 0 24 24">
+<path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Đang kết nối với GitHub...</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Đang thiết lập kênh mã hóa OAuth 2.0 an toàn qua cổng máy chủ DevHub.</p>
+</div>
+<div class="w-full bg-surface-container-high p-4 rounded-xl flex items-center justify-between font-label-code-sm text-label-code-sm text-primary">
+<span>Handshake in progress</span>
+<span class="animate-pulse">TLS 1.3 SECURE</span>
+</div>
+</div>
+<!-- STATE: 3. IMPORTING -->
+<div class="state-view hidden flex flex-col gap-5 py-2" id="view-importing">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-secondary-container/20 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px] animate-spin">sync</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Đang lấy dữ liệu GitHub...</h3>
+<p class="font-label-code-sm text-label-code-sm text-secondary">Đã kết nối tài khoản: alexchen</p>
+</div>
+</div>
+<!-- Animated Step-by-Step Progress Checklist -->
+<div class="flex flex-col gap-2.5 p-4 rounded-xl bg-surface-container">
+<div class="flex items-center justify-between text-secondary font-label-ui text-label-ui">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>Đã xác thực OAuth 2.0</span>
+</span>
+<span class="font-label-code-sm text-label-code-sm">100%</span>
+</div>
+<div class="flex items-center justify-between text-secondary font-label-ui text-label-ui">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>Đang lấy thông tin hồ sơ &amp; bio</span>
+</span>
+<span class="font-label-code-sm text-label-code-sm">100%</span>
+</div>
+<div class="flex items-center justify-between text-primary font-label-ui text-label-ui">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] animate-spin">progress_activity</span>
+<span>Đang phân tích repository (18/24)...</span>
+</span>
+<span class="font-label-code-sm text-label-code-sm">75%</span>
+</div>
+<div class="flex items-center justify-between text-outline font-label-ui text-label-ui opacity-50">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span>
+<span>Chuẩn bị cấu trúc Portfolio &amp; CV</span>
+</span>
+<span class="font-label-code-sm text-label-code-sm">0%</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-3/4 animate-pulse"></div>
+</div>
+<p class="font-label-code-sm text-label-code-sm text-center text-outline">
+                Quá trình đồng bộ nền thường hoàn tất trong chưa đầy 10 giây.
+              </p>
+</div>
+<!-- STATE: 4. CONNECTED -->
+<div class="state-view hidden flex flex-col gap-5 py-1" id="view-connected">
+<div class="p-4 rounded-xl bg-surface-container-high flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-surface-variant overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Hình đại diện lập trình viên cận cảnh biểu cảm thân thiện chuyên nghiệp chuẩn ảnh đại diện GitHub" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFg3n8G6lW3kXyjId6Z89tOm_KTEtEyaYdjSHdlITf1qLFcNuXLzB713_nuTG4I5G1sTbj-mcZH3GUGjn8IhmquL-8VhMCdKKwx1u3rD7u7UlpaMOh6aqqGdZguzZ4ZVSm6u6YmMsCejr4Kd8n9rh2J0E6DDPVv_DCClEPWbODYN8zXkgmwSmUVt-PacAAiV5O9K_YaeUD8iNsKavlNhoP9wbJbtH1SdvIx1_pphQlsEAtftAJypE-"/>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-ui text-label-ui font-semibold text-on-surface">Alex Chen</span>
+<span class="font-label-code-sm text-label-code-sm px-1.5 py-0.5 rounded bg-surface-container text-outline">@alexchen</span>
+</div>
+<span class="inline-flex items-center gap-1 font-label-code-sm text-label-code-sm text-secondary font-medium">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+                        Đã kết nối thành công
+                      </span>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface font-label-code-sm text-label-code-sm underline" onclick="switchState('default')" type="button">
+                    Đổi tài khoản
+                  </button>
+</div>
+<!-- Parsed Stats Metrics -->
+<div class="grid grid-cols-3 gap-2 text-center p-3 rounded-lg bg-surface-container-lowest">
+<div>
+<div class="font-headline-sm text-headline-sm font-semibold text-primary">24</div>
+<div class="font-label-code-sm text-label-code-sm text-outline">Repositories</div>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm font-semibold text-secondary">6</div>
+<div class="font-label-code-sm text-label-code-sm text-outline">Ngôn ngữ</div>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm font-semibold text-tertiary">128</div>
+<div class="font-label-code-sm text-label-code-sm text-outline">Stars</div>
+</div>
+</div>
+</div>
+<!-- Success Feedback Box -->
+<div class="flex items-center gap-3 p-3.5 rounded-lg bg-surface-container">
+<span class="material-symbols-outlined text-[20px] text-secondary">task_alt</span>
+<p class="font-body-sm text-body-sm text-on-surface leading-snug">
+                  Đã đồng bộ đầy đủ các dự án tiêu biểu. Dữ liệu đã sẵn sàng để kiến tạo hồ sơ và CV thông minh.
+                </p>
+</div>
+<!-- Continue Button -->
+<a class="w-full h-12 rounded-lg bg-gradient-to-r from-primary-container to-inverse-primary hover:opacity-95 text-white font-label-ui text-label-ui font-semibold flex items-center justify-center gap-2 transition-transform active:scale-[0.99] shadow-[0_0_24px_rgba(128,131,255,0.45)]" data-path="profile-setup" href="#">
+<span>Tiếp tục bước tiếp theo</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<!-- STATE: 5. ERROR -->
+<div class="state-view hidden flex flex-col gap-5 py-2" id="view-error">
+<div class="flex items-start gap-3.5 p-4 rounded-xl bg-error-container/30 text-on-error-container">
+<span class="material-symbols-outlined text-[24px] text-error shrink-0">error</span>
+<div class="flex flex-col gap-1">
+<h4 class="font-label-ui text-label-ui font-semibold text-error">Không thể kết nối GitHub</h4>
+<p class="font-body-sm text-body-sm text-on-surface leading-normal">
+                    Đã xảy ra lỗi khi kết nối hoặc vượt giới hạn API tạm thời từ máy chủ nguồn. Bạn có thể thử lại ngay hoặc tiếp tục thiết lập hồ sơ và đồng bộ lại sau.
+                  </p>
+</div>
+</div>
+<div class="flex flex-col gap-2.5">
+<button class="w-full h-11 rounded-lg bg-surface-container-highest hover:bg-surface-bright text-on-surface font-label-ui text-label-ui font-semibold flex items-center justify-center gap-2 transition-colors" onclick="switchState('connecting')" type="button">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+<span>Thử lại kết nối</span>
+</button>
+<a class="w-full h-11 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-ui text-label-ui font-medium flex items-center justify-center transition-colors" data-path="profile-setup" href="#">
+<span>Tiếp tục thiết lập hồ sơ thủ công</span>
+</a>
+</div>
+</div>
+<!-- Bottom Trust Badge -->
+<div class="pt-4 border-t border-white/5 flex items-center justify-center gap-2 font-label-code-sm text-label-code-sm text-outline">
+<span class="material-symbols-outlined text-[16px] text-secondary">lock</span>
+<span>Kết nối an toàn chuẩn mã hóa GitHub OAuth 2.0</span>
+</div>
+</div>
+<!-- Bottom Metric Indicator Info -->
+<div class="flex items-center justify-between px-2 font-label-code-sm text-label-code-sm text-outline">
+<span>CHỨNG CHỈ BẢO MẬT ISO/IEC 27001</span>
+<span>TOKEN ENCRYPTED (AES-256)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Inline Interactive Script for Demo Tabs & State Transitions -->
+<script>
+  function switchState(stateName) {
+    const views = ['default', 'connecting', 'importing', 'connected', 'error'];
+    
+    // Hide all views
+    views.forEach(name => {
+      const viewEl = document.getElementById('view-' + name);
+      if (viewEl) {
+        viewEl.classList.add('hidden');
+      }
+      
+      const tabEl = document.getElementById('tab-' + name);
+      if (tabEl) {
+        tabEl.classList.remove('bg-primary', 'text-on-primary', 'font-medium');
+        tabEl.classList.add('text-on-surface-variant');
+      }
+    });
+
+    // Show target view
+    const targetView = document.getElementById('view-' + stateName);
+    if (targetView) {
+      targetView.classList.remove('hidden');
+    }
+
+    // Highlight target tab
+    const targetTab = document.getElementById('tab-' + stateName);
+    if (targetTab) {
+      targetTab.classList.remove('text-on-surface-variant');
+      targetTab.classList.add('bg-primary', 'text-on-primary', 'font-medium');
+    }
+
+    // Auto-advance demo for connecting -> importing -> connected flow if user clicks connecting
+    if (stateName === 'connecting') {
+      setTimeout(() => {
+        // only auto advance if user is still looking at connecting
+        const isStillConnecting = !document.getElementById('view-connecting').classList.contains('hidden');
+        if (isStillConnecting) {
+          switchState('importing');
+        }
+      }, 1800);
+    } else if (stateName === 'importing') {
+      setTimeout(() => {
+        const isStillImporting = !document.getElementById('view-importing').classList.contains('hidden');
+        if (isStillImporting) {
+          switchState('connected');
+        }
+      }, 2400);
+    }
+  }
+</script></main><footer class="w-full bg-surface-container-lowest py-4"><div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left"><p class="font-label-code-sm text-label-code-sm text-on-surface-variant">© 2026 DevHub Platform. Mọi quyền được bảo lưu.</p><div class="flex items-center gap-2 font-label-code-sm text-label-code-sm text-outline"><span class="inline-block w-1.5 h-1.5 rounded-full bg-secondary"></span><span>SECURE ENCLAVE ACTIVE</span></div></div></footer></body></html>

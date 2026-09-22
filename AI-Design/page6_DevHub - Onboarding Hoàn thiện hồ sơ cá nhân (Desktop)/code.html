@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"primary-fixed-dim":"#c0c1ff","surface-container":"#1c1f2a","error":"#ffb4ab","tertiary-container":"#b76dff","primary":"#c0c1ff","on-error-container":"#ffdad6","on-surface":"#dfe2f1","secondary":"#7bd0ff","on-surface-variant":"#c7c4d7","inverse-on-surface":"#2c303b","surface-container-highest":"#313540","outline-variant":"#464554","primary-fixed":"#e1e0ff","surface-variant":"#313540","surface-container-lowest":"#0a0e18","on-secondary":"#00354a","primary-container":"#8083ff","on-tertiary-fixed-variant":"#6900b3","inverse-surface":"#dfe2f1","tertiary-fixed":"#f0dbff","on-tertiary-container":"#400071","on-background":"#dfe2f1","on-secondary-fixed-variant":"#004c69","tertiary":"#ddb7ff","error-container":"#93000a","on-primary-container":"#0d0096","on-secondary-fixed":"#001e2c","secondary-fixed-dim":"#7bd0ff","surface-tint":"#c0c1ff","inverse-primary":"#494bd6","on-primary":"#1000a9","on-primary-fixed-variant":"#2f2ebe","surface-container-high":"#262a35","outline":"#908fa0","secondary-fixed":"#c4e7ff","on-error":"#690005","surface-dim":"#0f131d","on-tertiary-fixed":"#2c0051","tertiary-fixed-dim":"#ddb7ff","surface-bright":"#353944","on-primary-fixed":"#07006c","on-tertiary":"#490080","background":"#0f131d","secondary-container":"#00a6e0","on-secondary-container":"#00374d","surface-container-low":"#171b26","surface":"#0f131d"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin":"2rem","margin-mobile":"1rem","space-xl":"2.5rem","gutter-mobile":"1rem","space-sm":"0.5rem","space-md":"1rem","space-lg":"1.5rem","space-xs":"0.25rem","gutter":"1.5rem"},"fontFamily":{"display-hero":["Geist"],"label-code":["JetBrains Mono"],"body-sm":["Inter"],"body-lg":["Inter"],"label-ui":["Inter"],"headline-md":["Geist"],"headline-sm":["Geist"],"headline-lg":["Geist"],"label-code-sm":["JetBrains Mono"],"display-hero-mobile":["Geist"],"body-md":["Inter"],"headline-lg-mobile":["Geist"]},"fontSize":{"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.03em","fontWeight":"700"}],"label-code":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"body-sm":["13px",{"lineHeight":"20px","fontWeight":"400"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"label-ui":["14px",{"lineHeight":"20px","letterSpacing":"-0.005em","fontWeight":"500"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-code-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"400"}],"display-hero-mobile":["36px",{"lineHeight":"42px","letterSpacing":"-0.025em","fontWeight":"700"}],"body-md":["15px",{"lineHeight":"24px","fontWeight":"400"}],"headline-lg-mobile":["28px",{"lineHeight":"34px","letterSpacing":"-0.015em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="h-16 max-w-[1200px] mx-auto px-gutter flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><div class="w-7 h-7 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container font-headline-sm text-headline-sm">D</div><span class="font-headline-sm text-headline-sm font-semibold tracking-tight text-on-surface">DevHub</span></div><div class="h-4 w-px bg-outline-variant/40 hidden sm:block"></div><span class="font-label-code-sm text-label-code-sm uppercase tracking-wider text-secondary hidden sm:inline-flex items-center px-space-xs py-0.5 rounded bg-surface-container-high">Onboarding Control Plane</span></div><nav class="hidden md:flex items-center gap-space-sm" data-active-classes="bg-surface-container-high text-primary font-medium rounded-lg"><a class="font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface px-space-sm py-1.5 transition-colors" data-path="account-setup" href="#">Connect Repositories</a><a aria-current="page" class="px-space-sm py-1.5 transition-colors bg-surface-container-high text-primary font-medium rounded-lg" data-path="profile-parsing" href="#">ATS Resume Engine</a><a class="font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface px-space-sm py-1.5 transition-colors" data-path="pipeline-metrics" href="#">Metrics & Verification</a></nav><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-right hidden sm:flex"><div class="font-label-code-sm text-label-code-sm text-on-surface-variant">STEP 01 / 03</div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 pb-24 bg-surface min-h-screen"><div class="max-w-[1200px] mx-auto px-gutter py-space-lg"><div class="flex flex-col w-full">
+<!-- Subtle Ambient Top Glow -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-24 left-1/4 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -top-20 right-1/4 w-80 h-80 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
+</div>
+<!-- Local Sub-Header / Workspace Ribbon -->
+<div class="w-full flex flex-col gap-space-md mb-space-lg">
+<div class="flex items-center justify-between py-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary font-label-code text-label-code shadow-sm">
+          >_
+        </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold tracking-tight text-on-surface">DevHub Control Engine</span>
+<span class="font-label-code-sm text-label-code-sm text-on-surface-variant flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+            Tự động đồng bộ môi trường phân tán
+          </span>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="hidden sm:flex items-center gap-space-xs px-space-sm py-1.5 rounded-full bg-surface-container-low shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+<span class="font-label-code text-label-code text-on-surface-variant">Đã lưu tự động</span>
+</div>
+<button class="inline-flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors font-label-ui text-label-ui" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+<span>Thoát</span>
+</button>
+</div>
+</div>
+<!-- Stepper & Progress Gauge -->
+<div class="w-full bg-surface-container-low rounded-xl p-space-md shadow-md">
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm mb-space-sm">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-md bg-surface-container-high text-primary font-label-code text-label-code tracking-wide uppercase">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+          BƯỚC 3 / 4 — HOÀN THIỆN HỒ SƠ
+        </div>
+<span class="font-label-code text-label-code text-secondary font-medium">Tiến độ quy trình: 75%</span>
+</div>
+<!-- Stepper Pills -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-xs pt-space-xs">
+<div class="flex items-center gap-space-xs p-space-xs rounded-lg bg-surface-container">
+<span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+<span class="font-label-code text-label-code text-on-surface">01 Mục tiêu</span>
+</div>
+<div class="flex items-center gap-space-xs p-space-xs rounded-lg bg-surface-container">
+<span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+<span class="font-label-code text-label-code text-on-surface">02 GitHub Sync</span>
+</div>
+<div class="flex items-center gap-space-xs p-space-xs rounded-lg bg-primary-container text-on-primary-container font-semibold shadow-sm">
+<span class="w-5 h-5 rounded-full bg-surface-container-lowest text-primary flex items-center justify-center font-label-code-sm text-label-code-sm">3</span>
+<span class="font-label-code text-label-code">03 Hồ sơ (Hiện tại)</span>
+</div>
+<div class="flex items-center gap-space-xs p-space-xs rounded-lg bg-surface-container-lowest/60 text-outline">
+<span class="w-5 h-5 rounded-full bg-surface-container flex items-center justify-center font-label-code-sm text-label-code-sm text-outline">4</span>
+<span class="font-label-code text-label-code">04 Hoàn tất</span>
+</div>
+</div>
+<!-- Linear Gauge -->
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full mt-space-md overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary via-primary-container to-secondary transition-all duration-700 ease-out" style="width: 75%;"></div>
+</div>
+</div>
+</div>
+<!-- Main Title Area -->
+<div class="flex flex-col gap-space-xs mb-space-xl">
+<div class="flex flex-wrap items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">
+        Hoàn thiện hồ sơ của bạn
+      </h1>
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container text-secondary font-label-code text-label-code shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+        Đã nhập dữ liệu từ GitHub (@alexchen)
+      </span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+      Kiểm tra thông tin DevHub đã tự động đồng bộ từ kho mã nguồn GitHub và hoàn thiện các thuộc tính định danh trước khi phân tích ATS & xuất bản Portfolio.
+    </p>
+</div>
+<!-- Workspace Grid: 65% Form vs 35% Sticky Live Preview -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- LEFT PANEL: Technical Profile Configuration (lg:col-span-8) -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<!-- Card 1: Avatar & Identity -->
+<div class="w-full bg-surface-container-low rounded-xl p-space-lg shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">account_circle</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Ảnh đại diện & Tài khoản định danh</span>
+</div>
+<span class="font-label-code-sm text-label-code-sm text-secondary bg-surface-container px-space-xs py-0.5 rounded">PUBLIC KEY ACTIVE</span>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-space-md pt-space-xs">
+<div class="relative group">
+<div class="w-24 h-24 rounded-2xl overflow-hidden bg-surface-container-high shadow-lg">
+<img class="w-full h-full object-cover" data-alt="Chân dung lập trình viên cao cấp làm việc trong văn phòng công nghệ tối màu với ánh sáng xanh neon và tím mềm mại" id="avatar-display" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCS4j2WLjvcQqsaBgBHMBVloK1vVgvIERkMiobbivGsyBitAqvLwZck-L8sNItvsNu4XDTF3EaLYZB-wqkcYsdxYmw1gNlnN7_5kkxzmizpsc871n1skIgnjaYTuT4x-wB4d-7LYkfAfcxXX7Y2orbu7WS4zymfcrgXsQTYwE_6AecyruDZQoyvlD04rupuer2IfK-0vt8w4bkCVCO-9GqjWD4yAa3QXoNrC9XlMVKXIBQ7FCzc0Bzs"/>
+</div>
+<div class="absolute -bottom-1 -right-1 w-7 h-7 rounded-lg bg-surface-container-lowest flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[16px] text-primary">terminal</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs items-center sm:items-start text-center sm:text-left flex-1 min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface" id="identity-alias">Nguyễn Văn Alex</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+</div>
+<div class="font-label-code text-label-code text-on-surface-variant flex items-center gap-space-xs">
+<span class="text-secondary font-medium">github:</span>
+<span>github.com/alexchen</span>
+<span class="text-outline-variant">•</span>
+<span class="text-primary font-medium">ID: 8849204</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs pt-space-xs">
+<button class="inline-flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-ui text-label-ui transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">file_upload</span>
+<span>Thay đổi ảnh</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-secondary font-label-ui text-label-ui transition-colors" id="btn-sync-gh-avatar" type="button">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+<span>Dùng ảnh từ GitHub</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2: Core Engineering Attributes -->
+<div class="w-full bg-surface-container-low rounded-xl p-space-lg shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">badge</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Thông tin cơ bản</span>
+</div>
+<span class="font-label-code text-label-code text-on-surface-variant">* Trường bắt buộc nhập</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Full Name -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-ui text-label-ui text-on-surface-variant flex items-center justify-between">
+<span>Họ và tên *</span>
+<span class="font-label-code-sm text-label-code-sm text-secondary">Đồng bộ từ Git Commits</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined text-outline text-[18px] absolute left-3">person</span>
+<input class="w-full h-11 pl-10 pr-space-sm rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-md text-body-md shadow-inner focus:outline-none focus:bg-surface-container-high transition-all" id="input-fullname" placeholder="Nhập họ và tên..." type="text" value="Nguyễn Văn Alex"/>
+</div>
+</div>
+<!-- Professional Title -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-ui text-label-ui text-on-surface-variant flex items-center justify-between">
+<span>Tiêu đề nghề nghiệp *</span>
+<span class="font-label-code-sm text-label-code-sm text-primary">ATS Target</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined text-outline text-[18px] absolute left-3">engineering</span>
+<input class="w-full h-11 pl-10 pr-space-sm rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-md text-body-md shadow-inner focus:outline-none focus:bg-surface-container-high transition-all" id="input-jobtitle" placeholder="Ví dụ: Lead Backend Architect..." type="text" value="Senior Distributed Systems Engineer"/>
+</div>
+</div>
+</div>
+<!-- Bio & AI Generation Suite -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-ui text-label-ui text-on-surface-variant">Giới thiệu bản thân (Bio kỹ sư)</label>
+<span class="font-label-code-sm text-label-code-sm text-on-surface-variant" id="char-counter">258 / 500 ký tự</span>
+</div>
+<textarea class="w-full p-space-sm rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-md text-body-md shadow-inner focus:outline-none focus:bg-surface-container-high transition-all resize-none" id="input-bio" maxlength="500" placeholder="Tóm tắt trọng tâm kỹ năng, kiến trúc phân tán, sản phẩm đã vận hành..." rows="4">Kỹ sư hệ thống phân tán với hơn 6 năm kinh nghiệm kiến tạo hệ thống microservices chịu tải cao, throughput 150K RPS bằng Rust, Go và Kubernetes. Đam mê tối ưu hóa low-latency data pipelines, event-driven streaming và mã nguồn mở.</textarea>
+<!-- AI Assistant Block -->
+<div class="mt-space-xs p-space-md rounded-xl bg-surface-container-high/60 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm">
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[22px] mt-0.5">auto_awesome</span>
+<div class="flex flex-col">
+<span class="font-label-ui text-label-ui text-on-surface font-semibold">Trợ lý AI Phân tích Git & Viết Bio</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tự động tổng hợp dữ liệu 24 repositories để tạo đoạn bio kỹ thuật chuẩn xác theo chuẩn ATS.</span>
+</div>
+</div>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container transition-all font-label-ui text-label-ui font-semibold shadow-md whitespace-nowrap" id="btn-generate-ai" type="button">
+<span class="material-symbols-outlined text-[18px]">magic_button</span>
+<span id="ai-btn-label">Tạo bằng AI</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3: Connected Nodes & Web Links -->
+<div class="w-full bg-surface-container-low rounded-xl p-space-lg shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">hub</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Liên kết trực tuyến (Social & Endpoints)</span>
+</div>
+<span class="font-label-code text-label-code text-secondary font-medium">Auto-parsed 4 links</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- GitHub URL -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-ui text-label-ui text-on-surface-variant flex items-center justify-between">
+<span>Hồ sơ GitHub</span>
+<span class="inline-flex items-center gap-1 font-label-code-sm text-label-code-sm text-secondary">
+<span class="material-symbols-outlined text-[14px]">verified</span> Đã xác thực
+              </span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined text-outline text-[18px] absolute left-3">code</span>
+<input class="w-full h-11 pl-10 pr-space-sm rounded-lg bg-surface-container text-on-surface font-label-code text-label-code cursor-not-allowed opacity-90 focus:outline-none" readonly="" type="text" value="https://github.com/alexchen"/>
+</div>
+</div>
+<!-- LinkedIn URL -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-ui text-label-ui text-on-surface-variant">LinkedIn Professional</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined text-outline text-[18px] absolute left-3">share</span>
+<input class="w-full h-11 pl-10 pr-space-sm rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline font-label-code text-label-code shadow-inner focus:outline-none focus:bg-surface-container-high transition-all" id="input-linkedin" placeholder="linkedin.com/in/username" type="text" value="https://linkedin.com/in/alexchen-dev"/>
+</div>
+</div>
+<!-- Personal Domain -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-ui text-label-ui text-on-surface-variant">Website / Blog cá nhân</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined text-outline text-[18px] absolute left-3">language</span>
+<input class="w-full h-11 pl-10 pr-space-sm rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline font-label-code text-label-code shadow-inner focus:outline-none focus:bg-surface-container-high transition-all" id="input-website" placeholder="https://domain.io" type="text" value="https://alexchen.dev"/>
+</div>
+</div>
+<!-- Contact Email -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-ui text-label-ui text-on-surface-variant flex items-center justify-between">
+<span>Email liên hệ</span>
+<span class="font-label-code-sm text-label-code-sm text-outline">Email chính</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined text-outline text-[18px] absolute left-3">alternate_email</span>
+<input class="w-full h-11 pl-10 pr-space-sm rounded-lg bg-surface-container text-on-surface font-label-code text-label-code cursor-not-allowed opacity-90 focus:outline-none" readonly="" type="email" value="alex.chen@example.com"/>
+</div>
+</div>
+</div>
+<div class="pt-space-xs">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-ui text-label-ui transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">add_link</span>
+<span>+ Thêm liên kết mới (LeetCode, X, Kaggle, DockerHub)</span>
+</button>
+</div>
+</div>
+</div>
+<!-- RIGHT PANEL: Live Preview & Sync Engine Analytics (lg:col-span-5) -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg sticky top-20">
+<!-- Live Preview Portfolio Header Card -->
+<div class="w-full bg-surface-container-low rounded-xl overflow-hidden shadow-xl flex flex-col">
+<!-- Window Mockup Titlebar -->
+<div class="bg-surface-container-high px-space-md py-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-error opacity-70"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary opacity-70"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-primary opacity-70"></span>
+<span class="ml-2 font-label-code-sm text-label-code-sm text-on-surface-variant">live-preview.devhub.profile</span>
+</div>
+<div class="inline-flex items-center gap-1 font-label-code-sm text-label-code-sm text-secondary">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>
+            LIVE RENDER
+          </div>
+</div>
+<!-- Rendered Card Canvas -->
+<div class="p-space-lg flex flex-col gap-space-md bg-gradient-to-b from-surface-container-low to-surface-container">
+<!-- Avatar + Titles -->
+<div class="flex items-start gap-space-md">
+<div class="relative flex-shrink-0">
+<div class="w-16 h-16 rounded-xl overflow-hidden bg-surface-container-highest shadow-md">
+<img class="w-full h-full object-cover" data-alt="Ảnh đại diện vuông bo góc của lập trình viên công nghệ thông tin trong môi trường kỹ thuật hiện đại" id="preview-avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcPo_Hdv0JUriD4q_1j84KxKIPeDy4JR5XPqOHEllXstth2lFO4nKcOA1gi2CzEog8mZGIuCOJ2NlQd7P7AkVmZsBjDi8DxYnTkiXlo02R75rZPSe7nny28PUi50zb1s8YyUWTZEStEtc5k4itrQs8b0T2kHSbP6AcJcKUQ9VmebrKViO5yWMzM3AS5HgPZmSP5iqxbN-VUOc2BYwCV56WtPUyW4GuWtY8rTpVvb87Oqlk0IHtVRJa"/>
+</div>
+<span class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-surface-container-lowest flex items-center justify-center text-[10px] text-secondary">
+<span class="material-symbols-outlined text-[12px]">code</span>
+</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center gap-space-xs flex-wrap">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface truncate" id="preview-name">
+                  Nguyễn Văn Alex
+                </h3>
+<span class="material-symbols-outlined text-secondary text-[16px]">verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-primary font-medium mt-0.5 truncate" id="preview-jobtitle">
+                Senior Distributed Systems Engineer
+              </p>
+<div class="flex flex-wrap items-center gap-1.5 mt-2">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-secondary font-label-code-sm text-label-code-sm">
+                  Top 1% Contributor
+                </span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-tertiary font-label-code-sm text-label-code-sm">
+                  Verified Dev
+                </span>
+</div>
+</div>
+</div>
+<!-- Dynamic Bio -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/80 text-on-surface">
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed" id="preview-bio">
+              Kỹ sư hệ thống phân tán với hơn 6 năm kinh nghiệm kiến tạo hệ thống microservices chịu tải cao, throughput 150K RPS bằng Rust, Go và Kubernetes. Đam mê tối ưu hóa low-latency data pipelines, event-driven streaming và mã nguồn mở.
+            </p>
+</div>
+<!-- Parsed Tech Stack Chips -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-code-sm text-label-code-sm text-outline uppercase tracking-wider">Kỹ năng cốt lõi (Trích xuất từ GitHub)</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code-sm text-label-code-sm text-primary font-medium">Rust (45%)</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code-sm text-label-code-sm text-secondary font-medium">Go (30%)</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code-sm text-label-code-sm text-on-surface font-medium">Kubernetes</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code-sm text-label-code-sm text-primary font-medium">TypeScript</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code-sm text-label-code-sm text-on-surface font-medium">Kafka</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code-sm text-label-code-sm text-on-surface font-medium">Docker</span>
+</div>
+</div>
+<!-- Action Links Row -->
+<div class="flex items-center justify-between pt-space-xs border-t border-surface-container-highest/60 text-on-surface-variant font-label-code-sm text-label-code-sm">
+<div class="flex items-center gap-space-sm">
+<span class="flex items-center gap-1 hover:text-secondary cursor-pointer transition-colors">
+<span class="material-symbols-outlined text-[14px]">link</span> alexchen.dev
+              </span>
+<span class="flex items-center gap-1 hover:text-primary cursor-pointer transition-colors">
+<span class="material-symbols-outlined text-[14px]">code</span> github
+              </span>
+</div>
+<span class="text-secondary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">bolt</span> DevHub Engine
+            </span>
+</div>
+</div>
+<div class="bg-surface-container px-space-md py-space-xs text-center">
+<span class="font-label-code-sm text-label-code-sm text-outline">
+            ⚡ Bản xem trước tự động cập nhật thời gian thực theo từng phím gõ của bạn.
+          </span>
+</div>
+</div>
+<!-- Card 2: GitHub Ingestion Overview Card -->
+<div class="w-full bg-surface-container-low rounded-xl p-space-md shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">terminal</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Tóm tắt dữ liệu GitHub đã nhập</span>
+</div>
+<a class="font-label-code-sm text-label-code-sm text-secondary hover:underline" href="#">Đổi tài khoản</a>
+</div>
+<!-- Metric Cards Bento -->
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col">
+<span class="font-label-code-sm text-label-code-sm text-on-surface-variant">Kho mã nguồn</span>
+<span class="font-headline-md text-headline-md font-bold text-on-surface">24</span>
+<span class="font-label-code-sm text-label-code-sm text-secondary">Đã đồng bộ trọn vẹn</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col">
+<span class="font-label-code-sm text-label-code-sm text-on-surface-variant">Stars nhận được</span>
+<span class="font-headline-md text-headline-md font-bold text-primary">128 ★</span>
+<span class="font-label-code-sm text-label-code-sm text-on-surface-variant">Toàn bộ repositories</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col">
+<span class="font-label-code-sm text-label-code-sm text-on-surface-variant">Ngôn ngữ chính</span>
+<span class="font-headline-md text-headline-md font-bold text-on-surface">06</span>
+<span class="font-label-code-sm text-label-code-sm text-on-surface-variant">Rust, Go, TS, v.v.</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col">
+<span class="font-label-code-sm text-label-code-sm text-on-surface-variant">Repo đề xuất CV</span>
+<span class="font-headline-md text-headline-md font-bold text-secondary">12</span>
+<span class="font-label-code-sm text-label-code-sm text-secondary">Chọn lọc thông minh</span>
+</div>
+</div>
+<!-- Inline SVG Language Distribution Bar -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div class="flex justify-between font-label-code-sm text-label-code-sm text-on-surface-variant">
+<span>Tỷ trọng mã nguồn:</span>
+<span>Rust 45% • Go 30% • TS 15% • Khác 10%</span>
+</div>
+<div class="w-full h-2 rounded-full flex overflow-hidden bg-surface-container-highest">
+<div class="bg-primary-container h-full" style="width: 45%;"></div>
+<div class="bg-secondary h-full" style="width: 30%;"></div>
+<div class="bg-primary h-full" style="width: 15%;"></div>
+<div class="bg-surface-bright h-full" style="width: 10%;"></div>
+</div>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-center gap-space-xs font-label-code-sm text-label-code-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">lock</span>
+<span>OAuth 2.0 Token được mã hóa an toàn</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-outline">verified_user</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Bottom Execution Bar Context -->
+<div class="mt-space-xl pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md border-t border-surface-container-high/40 pb-space-md">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+<span class="font-body-sm text-body-sm">
+        Dữ liệu được bảo mật chuẩn DevHub Sovereign. Bạn luôn có thể chỉnh sửa trong Studio sau này.
+      </span>
+</div>
+<div class="flex items-center gap-space-md w-full sm:w-auto justify-end">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-ui text-label-ui transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Quay lại</span>
+</button>
+<button class="min-w-[220px] h-12 inline-flex items-center justify-center gap-space-xs px-space-lg rounded-lg bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container font-label-ui text-label-ui font-semibold shadow-lg transition-all active:scale-[0.98]" id="btn-next-step" type="button">
+<span id="btn-next-label">Tiếp tục sang bước 4</span>
+<span class="material-symbols-outlined text-[18px]" id="btn-next-icon">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Interactive Logic -->
+<script>
+    (function() {
+      const inputName = document.getElementById('input-fullname');
+      const inputJob = document.getElementById('input-jobtitle');
+      const inputBio = document.getElementById('input-bio');
+      const charCounter = document.getElementById('char-counter');
+
+      const previewName = document.getElementById('preview-name');
+      const previewJob = document.getElementById('preview-jobtitle');
+      const previewBio = document.getElementById('preview-bio');
+      const identityAlias = document.getElementById('identity-alias');
+
+      const btnAi = document.getElementById('btn-generate-ai');
+      const aiBtnLabel = document.getElementById('ai-btn-label');
+
+      const btnNext = document.getElementById('btn-next-step');
+      const btnNextLabel = document.getElementById('btn-next-label');
+      const btnNextIcon = document.getElementById('btn-next-icon');
+
+      const btnSyncGhAvatar = document.getElementById('btn-sync-gh-avatar');
+
+      // Live 2-way data reflect
+      if (inputName && previewName) {
+        inputName.addEventListener('input', (e) => {
+          const val = e.target.value.trim();
+          const disp = val.length > 0 ? val : 'Tên lập trình viên';
+          previewName.textContent = disp;
+          if (identityAlias) identityAlias.textContent = disp;
+        });
+      }
+
+      if (inputJob && previewJob) {
+        inputJob.addEventListener('input', (e) => {
+          const val = e.target.value.trim();
+          previewJob.textContent = val.length > 0 ? val : 'Chức danh chuyên môn';
+        });
+      }
+
+      if (inputBio && previewBio && charCounter) {
+        inputBio.addEventListener('input', (e) => {
+          const val = e.target.value;
+          charCounter.textContent = val.length + ' / 500 ký tự';
+          previewBio.textContent = val.length > 0 ? val : 'Chưa có giới thiệu bản thân...';
+        });
+      }
+
+      // AI Generation Demo
+      if (btnAi && inputBio && previewBio && charCounter && aiBtnLabel) {
+        btnAi.addEventListener('click', () => {
+          aiBtnLabel.textContent = 'Đang phân tích 24 Repos...';
+          btnAi.disabled = true;
+          btnAi.classList.add('opacity-80', 'cursor-wait');
+
+          setTimeout(() => {
+            const aiGeneratedText = "Kỹ sư kiến trúc hệ thống phân tán (Distributed Systems) chuyên sâu Rust & Go, dẫn dắt các giải pháp microservices đạt lưu lượng 150.000+ RPS. Tác giả của 3 thư viện mã nguồn mở chuyên về Raft consensus và xử lý dữ liệu streaming low-latency với Kafka & Kubernetes.";
+            
+            inputBio.value = aiGeneratedText;
+            previewBio.textContent = aiGeneratedText;
+            charCounter.textContent = aiGeneratedText.length + ' / 500 ký tự';
+
+            aiBtnLabel.textContent = 'Tạo lại bằng AI';
+            btnAi.disabled = false;
+            btnAi.classList.remove('opacity-80', 'cursor-wait');
+          }, 900);
+        });
+      }
+
+      // Next Step Feedback
+      if (btnNext && btnNextLabel && btnNextIcon) {
+        btnNext.addEventListener('click', () => {
+          btnNextLabel.textContent = 'Đang chuẩn hóa hồ sơ...';
+          btnNextIcon.textContent = 'sync';
+          btnNextIcon.classList.add('animate-spin');
+
+          setTimeout(() => {
+            btnNextLabel.textContent = 'Chuyển hướng Bước 4 ✓';
+            btnNextIcon.textContent = 'check';
+            btnNextIcon.classList.remove('animate-spin');
+          }, 800);
+        });
+      }
+
+      // Sync Avatar Toast effect
+      if (btnSyncGhAvatar) {
+        btnSyncGhAvatar.addEventListener('click', () => {
+          const original = btnSyncGhAvatar.innerHTML;
+          btnSyncGhAvatar.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">sync</span><span>Đang tải từ GitHub...</span>';
+          setTimeout(() => {
+            btnSyncGhAvatar.innerHTML = '<span class="material-symbols-outlined text-[16px] text-secondary">check</span><span>Đã cập nhật ảnh</span>';
+            setTimeout(() => {
+              btnSyncGhAvatar.innerHTML = original;
+            }, 1800);
+          }, 600);
+        });
+      }
+    })();
+  </script>
+</div></div></main><footer class="fixed bottom-0 left-0 right-0 z-40 bg-surface-container-low/95 backdrop-blur-md shadow-[0_-4px_20px_rgba(0,0,0,0.35)]"><div class="h-20 max-w-[1200px] mx-auto px-gutter flex items-center justify-between"><button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-ui text-label-ui" type="button"><span class="material-symbols-outlined text-[18px]">arrow_back</span><span>Back</span></button><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-on-surface-variant hidden sm:inline-block">Changes saved locally</span><button class="inline-flex items-center gap-space-xs px-space-lg py-2.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container transition-all font-label-ui text-label-ui font-semibold shadow-[0_0_20px_-3px_rgba(192,193,255,0.35)]" type="button"><span>Continue</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span></button></div></div></footer></body></html>
