@@ -1,0 +1,23 @@
+// DevHub — Prisma Schema
+// Run: npx prisma generate
+// Run: npx prisma migrate dev --name init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ============================================================
+// MODELS — Sẽ được định nghĩa chi tiết sau khi Database Design phase
+// ============================================================
+
+// Placeholder — chưa implement
+// model User { ... }
+// model Portfolio { ... }
+// model GithubProfile { ... }
+// model GithubRepo { ... }
+// model PortfolioProject { ... }

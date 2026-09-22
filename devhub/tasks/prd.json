@@ -1,0 +1,249 @@
+﻿{
+  "project": "DevHub",
+  "branchName": "ralph/devhub-mvp",
+  "description": "DevHub MVP — CV & Portfolio Generator for Developers. GitHub OAuth → AI Content Generation → CV/Portfolio Builder → PDF Export + Public URL",
+  "userStories": [
+    {
+      "id": "US-001",
+      "title": "GitHub OAuth Login",
+      "description": "As a developer, I want to sign in with my GitHub account so that DevHub can access my GitHub data without me entering it manually.",
+      "acceptanceCriteria": [
+        "Sign in with GitHub button hien thi tren landing page va login page",
+        "Click vao button redirect den GitHub OAuth consent page",
+        "Sau khi user approve, redirect ve DevHub voi session duoc tao",
+        "User profile (avatar, name, email, github_username) duoc luu vao database",
+        "GitHub access token duoc luu an toan (encrypted hoac server-side session)",
+        "Neu user da co account, login vao account hien co (khong tao duplicate)",
+        "Typecheck passes"
+      ],
+      "priority": 1,
+      "passes": false,
+      "notes": "Scope: read:user, public_repo. Dung NextAuth.js v5 voi GitHub provider. Backend nhan token tu NextAuth va luu encrypted."
+    },
+    {
+      "id": "US-002",
+      "title": "Pull GitHub Data",
+      "description": "As a developer, I want DevHub to automatically import my GitHub repositories and stats so that I don't have to enter my project history manually.",
+      "acceptanceCriteria": [
+        "Sau khi login, he thong tu dong goi GitHub API lay: repos (toi da 100 repos moi nhat), languages, stars, bio, avatar URL",
+        "Voi moi repo: lay name, description, language, stargazers_count, topics, URL, is_fork, created_at, updated_at",
+        "Du lieu duoc luu vao database (bang github_repos va github_profile)",
+        "Xu ly GitHub API rate limit gracefully (hien thi error neu bi rate-limited, khong crash)",
+        "Toan bo qua trinh xay ra bat dong bo (async job qua BullMQ) — user thay loading state",
+        "Typecheck passes"
+      ],
+      "priority": 2,
+      "passes": false,
+      "notes": "Phu thuoc vao US-001. Dung BullMQ + Upstash Redis cho async job. Luu rate limit state vao Redis."
+    },
+    {
+      "id": "US-003",
+      "title": "AI Content Generation — Professional Summary",
+      "description": "As a developer, I want AI to write a professional summary about me based on my GitHub data so that I don't have to write it myself.",
+      "acceptanceCriteria": [
+        "AI (GPT-4o primary, Gemini fallback) generate doan summary 3-5 cau dua tren: top languages, so repo, so stars, bio GitHub",
+        "User co the chon ngon ngu output: Tieng Viet hoac Tieng Anh",
+        "Summary duoc luu vao database duoi truong ai_summary tren bang portfolios",
+        "User thay summary trong portfolio editor sau khi generation xong",
+        "Neu AI call that bai, hien thi error message ro rang va cho phep retry",
+        "Typecheck passes"
+      ],
+      "priority": 3,
+      "passes": false,
+      "notes": "Phu thuoc vao US-002. Dung LangChain.js. Cache ket qua AI vao DB, khong regenerate neu GitHub data khong doi. Cost ~$0.005-0.015 per call."
+    },
+    {
+      "id": "US-004",
+      "title": "AI Content Generation — Project Descriptions",
+      "description": "As a developer, I want AI to write professional descriptions for my top projects so that each project sounds impressive and clear.",
+      "acceptanceCriteria": [
+        "AI generate description (2-4 cau) cho top 6 repos (sort by stars, loai is_fork=true)",
+        "Description dua tren: repo name, description goc, language, topics, README (neu co, toi da 500 chars dau)",
+        "User co the chon ngon ngu output: Tieng Viet hoac Tieng Anh (dong bo voi setting AI summary)",
+        "Descriptions luu vao database tren bang portfolio_projects",
+        "Typecheck passes"
+      ],
+      "priority": 4,
+      "passes": false,
+      "notes": "Phu thuoc vao US-002. Goi GitHub API lay README.md cho moi repo (GET /repos/{owner}/{repo}/readme)."
+    },
+    {
+      "id": "US-005",
+      "title": "AI Content Generation — Skills List",
+      "description": "As a developer, I want AI to extract and rank my technical skills from my GitHub data so that my skill section is accurate and relevant.",
+      "acceptanceCriteria": [
+        "AI phan tich toan bo languages tu tat ca repos va tao danh sach skills co thu tu uu tien",
+        "Ket qua la mang string, vi du: [TypeScript, React, Node.js, PostgreSQL, ...]",
+        "Toi da 15 skills",
+        "Skills luu vao database duoi truong ai_skills (JSON array) tren bang portfolios",
+        "Typecheck passes"
+      ],
+      "priority": 5,
+      "passes": false,
+      "notes": "Phu thuoc vao US-002. Co the combine voi US-003 trong cung mot AI call de tiet kiem cost."
+    },
+    {
+      "id": "US-014",
+      "title": "Landing Page",
+      "description": "As a potential user, I want to see a professional landing page so that I understand what DevHub offers before signing up.",
+      "acceptanceCriteria": [
+        "Landing page co: headline ro rang, sub-headline, CTA Get Started with GitHub, section how it works (3 buoc), section benefits, footer",
+        "Page load < 2 giay (LCP)",
+        "Responsive tren mobile (375px) va desktop (1280px)",
+        "CTA button link den GitHub OAuth flow",
+        "Verify in browser using dev-browser skill",
+        "Typecheck passes"
+      ],
+      "priority": 6,
+      "passes": false,
+      "notes": "Co the lam song song voi US-001 den US-005. Next.js static page (khong can auth). Design: Tailwind CSS + shadcn/ui."
+    },
+    {
+      "id": "US-006",
+      "title": "Template Selection",
+      "description": "As a developer, I want to choose from multiple CV/portfolio templates so that my portfolio matches my personal style.",
+      "acceptanceCriteria": [
+        "Hien thi toi thieu 2 templates: Light (nen trang) va Dark (nen toi)",
+        "User nhin thay thumbnail preview cua moi template truoc khi chon",
+        "Click vao template → portfolio editor load voi template do",
+        "Lua chon template duoc luu vao database (field template_id tren bang portfolios)",
+        "Verify in browser using dev-browser skill",
+        "Typecheck passes"
+      ],
+      "priority": 7,
+      "passes": false,
+      "notes": "Phu thuoc vao US-003, US-004, US-005. Template la React components rieng biet. template_id la enum: light | dark."
+    },
+    {
+      "id": "US-015",
+      "title": "User Dashboard",
+      "description": "As a logged-in developer, I want a dashboard where I can see and manage my portfolio so that I have a central hub for all DevHub actions.",
+      "acceptanceCriteria": [
+        "Sau khi login, redirect den dashboard",
+        "Dashboard hien thi: avatar, ten, portfolio URL, trang thai privacy, nut Edit Portfolio, nut View Public Portfolio, nut Export PDF, nut Re-sync GitHub",
+        "Neu portfolio chua duoc generate lan dau: hien thi onboarding flow bat dau generate",
+        "Verify in browser using dev-browser skill",
+        "Typecheck passes"
+      ],
+      "priority": 8,
+      "passes": false,
+      "notes": "Phu thuoc vao US-001. Onboarding flow: Login → trigger US-002 → trigger US-003/004/005 → redirect editor."
+    },
+    {
+      "id": "US-007",
+      "title": "Portfolio Editor — WYSIWYG Editing",
+      "description": "As a developer, I want to edit my AI-generated content directly in the portfolio editor so that I can fix mistakes or add personal touches.",
+      "acceptanceCriteria": [
+        "Moi text field trong portfolio (summary, project descriptions, skills, ten, title) deu co the click de edit inline",
+        "Thay doi duoc auto-save (debounce 1s) hoac co nut Save ro rang",
+        "User co the revert ve AI-generated content goc cho tung field",
+        "Editing khong lam mat layout/formatting cua template",
+        "Verify in browser using dev-browser skill",
+        "Typecheck passes"
+      ],
+      "priority": 9,
+      "passes": false,
+      "notes": "Phu thuoc vao US-006. Luu ca ai_content (goc) va user_content (da chinh sua) rieng biet trong DB de ho tro revert."
+    },
+    {
+      "id": "US-008",
+      "title": "Toggle Projects On/Off",
+      "description": "As a developer, I want to hide specific repositories from my portfolio so that I can choose which projects to showcase.",
+      "acceptanceCriteria": [
+        "Trong portfolio editor, moi project card co toggle switch Show / Hide",
+        "Hidden projects khong hien thi tren public portfolio",
+        "Preferences duoc luu vao database (field is_visible tren bang portfolio_projects)",
+        "Verify in browser using dev-browser skill",
+        "Typecheck passes"
+      ],
+      "priority": 10,
+      "passes": false,
+      "notes": "Phu thuoc vao US-007. is_visible default = true."
+    },
+    {
+      "id": "US-012",
+      "title": "Portfolio Privacy Controls",
+      "description": "As a developer, I want to control who can see my portfolio so that I can keep it private while I'm still editing.",
+      "acceptanceCriteria": [
+        "Trong settings, user co the chon 1 trong 3 muc privacy: public / unlisted / private",
+        "Public: ai cung xem duoc, search engine index duoc (<meta name=robots content=index,follow>)",
+        "Unlisted: chi nguoi co link moi xem duoc, khong index (<meta name=robots content=noindex>)",
+        "Private: chi owner xem duoc, return HTTP 401 cho unauthenticated request",
+        "Mac dinh khi tao moi: private",
+        "Verify in browser using dev-browser skill",
+        "Typecheck passes"
+      ],
+      "priority": 11,
+      "passes": false,
+      "notes": "Phu thuoc vao US-001. privacy la enum: public | unlisted | private tren bang portfolios. Middleware kiem tra auth cho private."
+    },
+    {
+      "id": "US-011",
+      "title": "Custom URL Slug",
+      "description": "As a developer, I want to choose my own portfolio URL slug so that my link is personal and memorable.",
+      "acceptanceCriteria": [
+        "Trong settings, user co the nhap custom slug (chi chap nhan: a-z, 0-9, dau gach ngang)",
+        "He thong kiem tra slug co unique khong — neu da ton tai hien thi loi ro rang",
+        "Slug mac dinh = GitHub username cua user",
+        "Sau khi doi slug, old URL tra ve 404",
+        "Slug toi thieu 3 ky tu, toi da 30 ky tu",
+        "Verify in browser using dev-browser skill",
+        "Typecheck passes"
+      ],
+      "priority": 12,
+      "passes": false,
+      "notes": "Phu thuoc vao US-001. slug la unique index tren bang portfolios. Validate regex: ^[a-z0-9-]{3,30}$. Reserved slugs: api, admin, login, logout, dashboard, settings."
+    },
+    {
+      "id": "US-010",
+      "title": "Public Portfolio URL",
+      "description": "As a developer, I want a shareable public portfolio link so that I can send it to recruiters or clients.",
+      "acceptanceCriteria": [
+        "Moi user co portfolio URL dang: devhub.io/[slug]",
+        "Portfolio page public accessible, khong can login de xem (neu privacy = public hoac unlisted)",
+        "Portfolio page render dung tren server (SSR) de SEO indexable",
+        "<title> tag = [Ten User] — Developer Portfolio | DevHub",
+        "<meta description> duoc generate tu AI summary",
+        "Verify in browser using dev-browser skill",
+        "Typecheck passes"
+      ],
+      "priority": 13,
+      "passes": false,
+      "notes": "Phu thuoc vao US-010, US-011, US-012. Next.js route: app/[slug]/page.tsx. Dung generateMetadata() cho SEO."
+    },
+    {
+      "id": "US-013",
+      "title": "Re-sync GitHub Data",
+      "description": "As a developer, I want to refresh my GitHub data so that my portfolio reflects my latest projects and contributions.",
+      "acceptanceCriteria": [
+        "Nut Re-sync GitHub trong portfolio editor hoac settings",
+        "Click button → trigger async BullMQ job pull lai toan bo GitHub data",
+        "Sau khi sync xong, portfolio editor tu refresh voi data moi",
+        "Hien thi timestamp Last synced: X minutes ago",
+        "Rate limit: user chi co the re-sync toi da 1 lan / 10 phut (hien thi countdown neu bi limit)",
+        "Verify in browser using dev-browser skill",
+        "Typecheck passes"
+      ],
+      "priority": 14,
+      "passes": false,
+      "notes": "Phu thuoc vao US-002. Luu last_synced_at vao bang github_profile. Kiem tra rate limit trong Redis (key: resync:{userId}, TTL: 600s)."
+    },
+    {
+      "id": "US-009",
+      "title": "Export PDF",
+      "description": "As a developer, I want to export my CV as a PDF so that I can attach it to job applications.",
+      "acceptanceCriteria": [
+        "Nut Export PDF ro rang trong portfolio editor",
+        "PDF duoc generate server-side bang Puppeteer (headless Chrome)",
+        "PDF trong giong het portfolio preview tren browser (WYSIWYG)",
+        "PDF download ve may user voi filename devhub-cv-[username].pdf",
+        "File size PDF < 5MB",
+        "Generate time < 15 giay (hien thi loading spinner trong luc cho)",
+        "Typecheck passes"
+      ],
+      "priority": 15,
+      "passes": false,
+      "notes": "Phu thuoc vao US-007. Puppeteer can --no-sandbox flag tren Railway. PDF duoc luu tam tren Cloudflare R2 roi stream ve client. Can config Railway service co >= 512MB RAM."
+    }
+  ]
+}
