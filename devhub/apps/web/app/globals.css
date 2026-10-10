@@ -1,26 +1,232 @@
 @import "tailwindcss";
 
+/* ─── DevHub Design System ─── */
+/* Material Design 3 Color Tokens (Dark Theme) */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Surface */
+  --background:               #0f131d;
+  --surface:                  #0f131d;
+  --surface-dim:              #0f131d;
+  --surface-bright:           #353944;
+  --surface-container-lowest: #0a0e18;
+  --surface-container-low:    #171b26;
+  --surface-container:        #1c1f2a;
+  --surface-container-high:   #262a35;
+  --surface-container-highest:#313540;
+  --surface-variant:          #313540;
+
+  /* Primary */
+  --primary:                  #c0c1ff;
+  --primary-fixed:            #e1e0ff;
+  --primary-fixed-dim:        #c0c1ff;
+  --primary-container:        #8083ff;
+  --on-primary:               #1000a9;
+  --on-primary-fixed:         #07006c;
+  --on-primary-fixed-variant: #2f2ebe;
+  --on-primary-container:     #0d0096;
+  --inverse-primary:          #494bd6;
+
+  /* Secondary */
+  --secondary:                #7bd0ff;
+  --secondary-fixed:          #c4e7ff;
+  --secondary-fixed-dim:      #7bd0ff;
+  --secondary-container:      #00a6e0;
+  --on-secondary:             #00354a;
+  --on-secondary-fixed:       #001e2c;
+  --on-secondary-fixed-variant:#004c69;
+  --on-secondary-container:   #00374d;
+
+  /* Tertiary */
+  --tertiary:                 #ddb7ff;
+  --tertiary-fixed:           #f0dbff;
+  --tertiary-fixed-dim:       #ddb7ff;
+  --tertiary-container:       #b76dff;
+  --on-tertiary:              #490080;
+  --on-tertiary-fixed:        #2c0051;
+  --on-tertiary-fixed-variant:#6900b3;
+  --on-tertiary-container:    #400071;
+
+  /* On Surface */
+  --on-surface:               #dfe2f1;
+  --on-surface-variant:       #c7c4d7;
+  --on-background:            #dfe2f1;
+  --inverse-surface:          #dfe2f1;
+  --inverse-on-surface:       #2c303b;
+
+  /* Error */
+  --error:                    #ffb4ab;
+  --error-container:          #93000a;
+  --on-error:                 #690005;
+  --on-error-container:       #ffdad6;
+
+  /* Outline */
+  --outline:                  #908fa0;
+  --outline-variant:          #464554;
+  --surface-tint:             #c0c1ff;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Map CSS vars → Tailwind tokens */
+  --color-background:               var(--background);
+  --color-surface:                  var(--surface);
+  --color-surface-dim:              var(--surface-dim);
+  --color-surface-bright:           var(--surface-bright);
+  --color-surface-container-lowest: var(--surface-container-lowest);
+  --color-surface-container-low:    var(--surface-container-low);
+  --color-surface-container:        var(--surface-container);
+  --color-surface-container-high:   var(--surface-container-high);
+  --color-surface-container-highest:var(--surface-container-highest);
+  --color-surface-variant:          var(--surface-variant);
+
+  --color-primary:                  var(--primary);
+  --color-primary-fixed:            var(--primary-fixed);
+  --color-primary-fixed-dim:        var(--primary-fixed-dim);
+  --color-primary-container:        var(--primary-container);
+  --color-on-primary:               var(--on-primary);
+  --color-on-primary-fixed:         var(--on-primary-fixed);
+  --color-on-primary-fixed-variant: var(--on-primary-fixed-variant);
+  --color-on-primary-container:     var(--on-primary-container);
+  --color-inverse-primary:          var(--inverse-primary);
+
+  --color-secondary:                var(--secondary);
+  --color-secondary-fixed:          var(--secondary-fixed);
+  --color-secondary-fixed-dim:      var(--secondary-fixed-dim);
+  --color-secondary-container:      var(--secondary-container);
+  --color-on-secondary:             var(--on-secondary);
+  --color-on-secondary-fixed:       var(--on-secondary-fixed);
+  --color-on-secondary-container:   var(--on-secondary-container);
+
+  --color-tertiary:                 var(--tertiary);
+  --color-tertiary-fixed:           var(--tertiary-fixed);
+  --color-tertiary-fixed-dim:       var(--tertiary-fixed-dim);
+  --color-tertiary-container:       var(--tertiary-container);
+  --color-on-tertiary:              var(--on-tertiary);
+  --color-on-tertiary-fixed:        var(--on-tertiary-fixed);
+  --color-on-tertiary-container:    var(--on-tertiary-container);
+
+  --color-on-surface:               var(--on-surface);
+  --color-on-surface-variant:       var(--on-surface-variant);
+  --color-on-background:            var(--on-background);
+  --color-inverse-surface:          var(--inverse-surface);
+  --color-inverse-on-surface:       var(--inverse-on-surface);
+
+  --color-error:                    var(--error);
+  --color-error-container:          var(--error-container);
+  --color-on-error:                 var(--on-error);
+  --color-on-error-container:       var(--on-error-container);
+
+  --color-outline:                  var(--outline);
+  --color-outline-variant:          var(--outline-variant);
+  --color-surface-tint:             var(--surface-tint);
+
+  /* Fonts */
+  --font-sans:  var(--font-geist-sans);
+  --font-mono:  var(--font-geist-mono);
+  --font-inter: var(--font-inter);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* ─── Base reset ─── */
+*, *::before, *::after { box-sizing: border-box; }
 
-body {
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--on-surface);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--outline-variant); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--outline); }
+
+/* ─── Animations ─── */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes slide-in-right {
+  from { opacity: 0; transform: translateX(24px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes slide-in-left {
+  from { opacity: 0; transform: translateX(-24px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-6px); }
+}
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px -4px rgba(192, 193, 255, 0.3); }
+  50%       { box-shadow: 0 0 32px -4px rgba(192, 193, 255, 0.55); }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+.animate-fade-in       { animation: fade-in 0.4s ease both; }
+.animate-slide-right   { animation: slide-in-right 0.35s ease both; }
+.animate-slide-left    { animation: slide-in-left 0.35s ease both; }
+.animate-float         { animation: float 3s ease-in-out infinite; }
+.animate-glow-pulse    { animation: glow-pulse 2.5s ease-in-out infinite; }
+
+/* Stagger delays */
+.delay-75  { animation-delay: 75ms; }
+.delay-150 { animation-delay: 150ms; }
+.delay-225 { animation-delay: 225ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-450 { animation-delay: 450ms; }
+
+/* ─── Glassmorphism utilities ─── */
+.glass {
+  background: rgba(26, 31, 42, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(70, 69, 84, 0.5);
+}
+.glass-strong {
+  background: rgba(10, 14, 24, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(70, 69, 84, 0.6);
+}
+
+/* ─── Focus ring ─── */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ─── Page transition wrapper ─── */
+.page-enter {
+  animation: fade-in 0.3s ease both;
+}
+
+/* ─── Gradient text ─── */
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-fixed) 50%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Code badge style ─── */
+.code-badge {
+  font-family: var(--font-geist-mono), 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.03em;
+}
+
+/* ─── Ambient glow backgrounds ─── */
+.glow-primary {
+  background: radial-gradient(ellipse 80% 60% at 50% -20%, rgba(128, 131, 255, 0.15), transparent);
+}
+.glow-secondary {
+  background: radial-gradient(ellipse 60% 40% at 80% 60%, rgba(123, 208, 255, 0.1), transparent);
 }
